@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>ui</title>
+        <style>
+            ul,
+            li {
+                list-style: none;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="wrapper">
+            <main style="background-color: #e0e0e0">
+                <div
+                    style="
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        row-gap: 3rem;
+                        padding: 5rem;
+                    "
+                    class="container"
+                >
+                    <!-- typography -->
+                    <div style="text-align: center">
+                        <div class="h h_h1">heading</div>
+                        <div class="h h_h2">heading</div>
+                        <div class="h h_h3">heading</div>
+                        <div class="h h_h4">heading</div>
+                        <div class="txt30 txt30_md">text</div>
+                        <div class="txt20 txt20_md">text</div>
+                        <div class="num-txt">x 50</div>
+                    </div>
+
+                    <!-- buttons -->
+                    <div style="display: flex; gap: 2rem">
+                        <button type="button" class="i-btn i-btn_arr-prev">
+                            <svg>
+                                <use href="#arr-left-svg"></use>
+                            </svg>
+                        </button>
+                        <button type="button" class="i-btn i-btn_arr-next">
+                            <svg>
+                                <use href="#arr-right-svg"></use>
+                            </svg>
+                        </button>
+                    </div>
+                    <div style="display: flex; flex-direction: column; align-items: center; row-gap: 2rem">
+                        <button type="button" class="btn btn_pink">
+                            <span class="btn__txt">связаться с нами</span>
+                        </button>
+                        <button type="button" class="btn btn_white">
+                            <span class="btn__txt">связаться с нами</span>
+                        </button>
+                        <button type="button" class="btn btn_gold">
+                            <span class="btn__txt">связаться с нами</span>
+                        </button>
+                    </div>
+
+                    <!-- inputs -->
+                    <form
+                        data-dev
+                        action="#"
+                        style="display: flex; flex-direction: column; align-items: center; row-gap: 2rem"
+                    >
+                        <div data-hint="Поле заполнено не верно" class="input">
+                            <input
+                                data-validate
+                                data-required
+                                autocomplete="off"
+                                type="text"
+                                name="form[]"
+                                placeholder="Имя"
+                                class="input__field"
+                            />
+                        </div>
+                    </form>
+                </div>
+            </main>
+        </div>
+        <include src="./components/svg.html"></include>
+    </body>
+</html>
