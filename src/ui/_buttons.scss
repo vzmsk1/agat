@@ -109,8 +109,6 @@
     height: 9rem;
     border-radius: 50%;
 
-    background: url('./assets/images/bg-svg/liner-gold.svg') center / cover no-repeat;
-
     svg {
         width: 3rem;
     }
@@ -134,6 +132,19 @@
                     }
                 }
             }
+        }
+    }
+
+    &:not(&_bg) {
+        background: url('./assets/images/bg-svg/liner-gold.svg') center / cover no-repeat;
+    }
+
+    &_bg {
+        background-color: $pink;
+
+        svg {
+            width: 3.2rem;
+            height: 3.2rem;
         }
     }
 
