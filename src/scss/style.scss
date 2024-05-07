@@ -77,6 +77,12 @@ main {
     }
 }
 
+.no-margin {
+    @media (min-width: 48em) {
+        margin: 0;
+    }
+}
+
 // ----- imports
 
 // header / footer
