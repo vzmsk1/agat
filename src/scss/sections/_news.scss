@@ -1,0 +1,150 @@
+.news {
+    &__container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__title {
+        margin-bottom: 5rem;
+
+        align-self: center;
+
+        @media (max-width: 48em) {
+            margin-bottom: 8rem;
+        }
+    }
+
+    &__carousel {
+        position: relative;
+    }
+
+    &__swiper {
+        &.swiper {
+            overflow: visible;
+
+            @media (max-width: 48em) {
+                margin-bottom: 4.8rem;
+            }
+        }
+    }
+
+    &__nav-btn {
+        position: absolute;
+        z-index: 2;
+        top: 50%;
+
+        transform: translateY(-50%);
+
+        &.i-btn_arr-prev {
+            left: 0;
+
+            transform: translateX(-50%);
+        }
+
+        &.i-btn_arr-next {
+            right: 0;
+
+            transform: translateX(50%);
+        }
+
+        @media (max-width: 48em) {
+            display: none;
+        }
+    }
+
+    &__pagination {
+        @media (min-width: 48em) {
+            display: none;
+        }
+    }
+}
+
+.card-news {
+    @media (min-width: 48em) {
+        &.swiper-slide {
+            opacity: 0;
+            visibility: hidden;
+
+            transition:
+                opacity 0.3s ease,
+                visibility 0.3s ease;
+        }
+
+        &.swiper-slide-active,
+        &.swiper-slide-next,
+        &.swiper-slide-next + .swiper-slide {
+            opacity: 1;
+            visibility: visible;
+        }
+    }
+
+    &__inner {
+        display: flex;
+        flex-direction: column;
+        min-height: 76rem;
+        border-radius: 5rem 0;
+
+        overflow: hidden;
+
+        @media (max-width: 48em) {
+            min-height: 96rem;
+            border-radius: 6rem 0;
+        }
+    }
+
+    &__content {
+        margin-bottom: auto;
+        padding: 4.8rem 3.2rem 2.1rem 3.2rem;
+
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+
+        color: $white;
+
+        background: url('./assets/images/bg-svg/liner-pink.svg') center / cover no-repeat;
+
+        @media (max-width: 48em) {
+            padding: 4rem 2.8rem 5.6rem 2.8rem;
+        }
+    }
+
+    &__title {
+        margin-bottom: 8.9rem;
+
+        max-width: 37rem;
+
+        font-weight: 500;
+        font-size: 4rem;
+        line-height: 4.8rem;
+
+        @media (max-width: 48em) {
+            margin-bottom: 9.6rem;
+
+            font-size: 3.6rem;
+            line-height: 4.4rem;
+        }
+    }
+
+    &__date {
+        font-weight: 500;
+        font-size: 2.4rem;
+        line-height: 2.9rem;
+        color: #ffffff;
+
+        @media (max-width: 48em) {
+            font-size: 2.4rem;
+            line-height: 3rem;
+        }
+    }
+
+    &__bg-wrap {
+        flex: 1 1 auto;
+    }
+
+    &__bg {
+        height: 100%;
+
+        object-fit: cover;
+    }
+}
