@@ -1,0 +1,115 @@
+.elevators {
+    &__container {
+        display: flex;
+        gap: 4rem;
+
+        @media (max-width: 48em) {
+            flex-direction: column;
+            gap: 6.4rem;
+        }
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+
+        @media (min-width: 48em) {
+            align-self: center;
+            flex: 1 1 auto;
+        }
+    }
+
+    &__title {
+        margin-bottom: 5rem;
+
+        @media (max-width: 48em) {
+            margin-bottom: 6.4rem;
+        }
+    }
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+        row-gap: 5rem;
+
+        counter-reset: number;
+
+        @media (max-width: 48em) {
+            row-gap: 4.8rem;
+        }
+    }
+
+    &__image-wrap {
+        height: 62rem;
+
+        @media (min-width: 48em) {
+            flex: 0 0 84rem;
+            width: 84rem;
+            height: auto;
+
+            transform: translateX(1rem);
+        }
+    }
+
+    &__image {
+        width: 115%;
+        height: 100%;
+        border-radius: 0 0 0 10rem;
+
+        object-fit: cover;
+
+        @media (max-width: 48em) {
+            width: 100%;
+            border-radius: 0 0 0 8.8rem;
+        }
+    }
+}
+
+.list-item-nums {
+    display: flex;
+    align-items: center;
+    column-gap: 4rem;
+
+    counter-increment: number;
+
+    &::before {
+        content: counter(number) ' ';
+
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        flex: 0 0 10rem;
+        width: 10rem;
+        height: 10rem;
+        border-radius: 50%;
+
+        font-weight: 500;
+        font-size: 5rem;
+        line-height: 6.3ren;
+        color: #ffffff;
+
+        background: linear-gradient(
+            236.5deg,
+            #c10b73 -4.18%,
+            #b6136d 13.92%,
+            #f55bb2 30.54%,
+            #b6136d 49.38%,
+            #f55bb2 66.56%,
+            #b6136d 83.74%,
+            #c10b73 106.46%
+        );
+    }
+
+    @media (max-width: 48em) {
+        column-gap: 3.2rem;
+
+        &::before {
+            flex: 0 0 8.8rem;
+            width: 8.8rem;
+            height: 8.8rem;
+
+            font-size: 4rem;
+            line-height: 110%;
+        }
+    }
+}

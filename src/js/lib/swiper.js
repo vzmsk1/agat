@@ -62,6 +62,22 @@ function initSlidersOnResize() {
             }
         });
     }
+    if (document.querySelector('.complexes__swiper')) {
+        if (mm.matches) {
+            new Swiper('.complexes__swiper', {
+                modules: [Pagination],
+                speed: 800,
+                loop: true,
+                slidesPerView: 1,
+                spaceBetween: remToPx(4),
+                pagination: {
+                    el: '.complexes__pagination',
+                    type: 'bullets',
+                    clickable: true
+                }
+            });
+        }
+    }
 }
 
 function initSliders() {}

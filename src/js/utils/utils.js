@@ -1,3 +1,7 @@
+import { gsap } from 'gsap';
+
+const mm = gsap.matchMedia();
+
 /**
  * set hash to url
  * @param {string} hash
@@ -289,5 +293,29 @@ export const removeClasses = (array, className) => {
 export const setCurrentYear = () => {
     if (document.getElementById('currentYear')) {
         document.getElementById('currentYear').innerHTML = new Date().getFullYear();
+    }
+};
+
+export const switchAttrValue = () => {
+    const items = document.querySelectorAll('[data-switch-attr]');
+
+    if (items.length) {
+        items.forEach((item) => {
+            const dataArray = item.dataset.switchAttr.trim().split('/');
+            const data = dataArray.map((el) => el.split(','));
+
+            data.forEach((i) => {
+                const switchValue = (value) => {
+                    item.setAttribute(`${i[0]}`, `${value}`);
+                };
+
+                mm.add('(max-width: 768px)', () => {
+                    switchValue(i[2]);
+                    return () => {
+                        switchValue(i[1]);
+                    };
+                });
+            });
+        });
     }
 };

@@ -10,6 +10,9 @@ utils.menuInit();
 // set current year
 utils.setCurrentYear();
 
+// switch attribute value on resize
+utils.switchAttrValue();
+
 // ------------------------------- components -------------------------------
 
 // forms

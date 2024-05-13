@@ -1,0 +1,243 @@
+.complexes {
+    &__container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__pagination {
+        @media (min-width: 48em) {
+            display: none;
+        }
+    }
+
+    &__info {
+        margin-bottom: 15rem;
+
+        @media (max-width: 48em) {
+            margin-bottom: 16rem;
+        }
+    }
+
+    &__main {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__title {
+        margin-bottom: 5rem;
+
+        align-self: center;
+
+        text-align: center;
+
+        @media (max-width: 48em) {
+            margin-bottom: 4rem;
+        }
+    }
+
+    &__content {
+        position: relative;
+
+        padding-top: 5rem;
+
+        display: flex;
+        flex-direction: column;
+
+        color: $white;
+
+        &::after {
+            content: '';
+
+            position: absolute;
+            z-index: -1;
+            top: 0;
+            left: -14rem;
+
+            width: 117%;
+            height: 78%;
+
+            background: url('./assets/images/bg-svg/liner-pink.svg') center / cover no-repeat;
+        }
+
+        @media (max-width: 48em) {
+            padding-top: 6.4rem;
+
+            &::after {
+                left: -4rem;
+
+                width: 112%;
+            }
+        }
+    }
+
+    &__subtitle {
+        margin-bottom: 5rem;
+
+        align-self: center;
+
+        color: $white;
+
+        @media (max-width: 48em) {
+            margin-bottom: 6.4rem;
+        }
+    }
+
+    &__swiper {
+        &.swiper {
+            overflow: visible;
+
+            @media (max-width: 48em) {
+                margin-bottom: 4.8rem;
+            }
+        }
+    }
+
+    &__swiper-wrapper {
+        &.swiper-wrapper {
+            @media (min-width: 48em) {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                column-gap: 3.9rem;
+                row-gap: 4.3rem;
+            }
+        }
+    }
+}
+
+.info-complexes {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 4rem;
+
+    @media (max-width: 48em) {
+        row-gap: 8rem;
+    }
+
+    &__icon {
+        svg {
+            width: 13.7rem;
+
+            @media (max-width: 48em) {
+                width: 22.4rem;
+            }
+        }
+    }
+
+    &__subtitle {
+        @media (min-width: 48em) {
+            max-width: 113.5rem;
+
+            text-align: center;
+        }
+    }
+}
+
+.card-complexes {
+    border-radius: 0 0 13.6rem 0;
+
+    overflow: hidden;
+
+    &_large {
+        @media (min-width: 48em) {
+            grid-column: span 2;
+        }
+    }
+
+    @media (any-hover: hover) {
+        &:hover {
+            .card-complexes__content {
+                opacity: 1;
+                visibility: visible;
+            }
+        }
+    }
+
+    @media (max-width: 48em) {
+        border-radius: 8.8rem 0;
+    }
+
+    &__inner {
+        display: flex;
+
+        height: 38.3rem;
+
+        @media (max-width: 48em) {
+            min-height: 73.2rem;
+            height: 100%;
+        }
+    }
+
+    &__image-wrap,
+    &__content {
+        width: 100%;
+        height: 100%;
+    }
+
+    &__image-wrap {
+        @media (max-width: 48em) {
+            position: absolute;
+            top: 0;
+            left: 0;
+
+            width: 100%;
+            height: 100%;
+
+            &::after {
+                content: '';
+
+                position: absolute;
+                top: 0;
+                left: 0;
+
+                width: 100%;
+                height: 100%;
+
+                background: linear-gradient(180deg, rgba(0, 0, 0, 0) 59.82%, rgba(0, 0, 0, 0.4) 89.15%);
+            }
+        }
+    }
+
+    &__image {
+        height: 100%;
+
+        object-fit: cover;
+    }
+
+    &__content {
+        position: relative;
+        z-index: 2;
+
+        margin-top: auto;
+        padding: 6.8rem;
+
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+        min-height: 100%;
+
+        text-align: center;
+        color: $white;
+
+        @media (min-width: 48em) {
+            position: absolute;
+            top: 0;
+            left: 0;
+
+            margin-top: 0;
+            padding: 0;
+
+            align-items: center;
+            min-height: auto;
+
+            background-color: rgba(0, 0, 0, 0.3);
+
+            opacity: 0;
+            visibility: hidden;
+
+            transition:
+                opacity 0.3s ease,
+                visibility 0.3s ease;
+        }
+    }
+}
