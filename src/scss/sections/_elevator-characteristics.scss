@@ -1,0 +1,152 @@
+.elevator-characteristics {
+    display: flex;
+    flex-direction: column;
+
+    &__bg-wrap {
+        margin-bottom: 15rem;
+
+        height: 91.8rem;
+
+        @media (max-width: 48em) {
+            margin-bottom: 16rem;
+
+            height: 100rem;
+        }
+    }
+
+    &__bg {
+        height: 100%;
+
+        object-fit: cover;
+    }
+
+    &__container {
+        display: flex;
+        gap: 4rem;
+
+        @media (max-width: 48em) {
+            flex-direction: column;
+            gap: 6.4rem;
+        }
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+
+        @media (min-width: 48em) {
+            align-self: center;
+        }
+    }
+
+    &__title {
+        margin-bottom: 5rem;
+
+        @media (max-width: 48em) {
+            margin-bottom: 6.4rem;
+        }
+    }
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+        row-gap: 5rem;
+
+        @media (max-width: 48em) {
+            row-gap: 6.4rem;
+        }
+    }
+
+    &__item {
+        display: flex;
+        flex-direction: column;
+        row-gap: 3.2rem;
+
+        @media (max-width: 48em) {
+            row-gap: 4rem;
+        }
+    }
+
+    &__subtitle {
+        @media (max-width: 48em) {
+            font-size: 4rem;
+            font-weight: 700;
+        }
+    }
+
+    &__sublist {
+        display: flex;
+        flex-direction: column;
+        row-gap: 2rem;
+
+        @media (max-width: 48em) {
+            row-gap: 3.2rem;
+        }
+    }
+
+    &__sublist-item {
+        display: flex;
+        column-gap: 0.8rem;
+
+        color: $pink;
+
+        &::before {
+            content: '';
+
+            flex: 0 0 1.2rem;
+            width: 1.2rem;
+            height: 1.2rem;
+            border-radius: 50%;
+
+            background: linear-gradient(
+                236.5deg,
+                #c10b73 -4.18%,
+                #b6136d 13.92%,
+                #f55bb2 30.54%,
+                #b6136d 49.38%,
+                #f55bb2 66.56%,
+                #b6136d 83.74%,
+                #c10b73 106.46%
+            );
+
+            transform: translateY(1.1rem);
+        }
+
+        @media (max-width: 48em) {
+            column-gap: 1.6rem;
+
+            font-size: 3.2rem;
+
+            &::before {
+                flex: 0 0 1.6rem;
+                width: 1.6rem;
+                height: 1.6rem;
+            }
+        }
+    }
+
+    &__image-wrap {
+        height: 62rem;
+
+        @media (min-width: 48em) {
+            margin-left: -14rem;
+
+            flex: 0 0 105rem;
+            width: 105rem;
+            height: 80.5rem;
+
+            transform: translateX(14rem);
+        }
+    }
+
+    &__image {
+        height: 100%;
+        border-radius: 0 0 0 10rem;
+
+        object-fit: cover;
+
+        @media (max-width: 48em) {
+            border-radius: 0 0 0 8.8rem;
+        }
+    }
+}

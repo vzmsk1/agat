@@ -104,7 +104,8 @@
     }
 }
 
-.info-complexes {
+.info-complexes,
+.info-complexes__container {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -113,7 +114,9 @@
     @media (max-width: 48em) {
         row-gap: 8rem;
     }
+}
 
+.info-complexes {
     &__icon {
         svg {
             width: 13.7rem;
@@ -130,10 +133,19 @@
 
             text-align: center;
         }
+        @media (max-width: 48em) {
+            &_vertical {
+                display: flex;
+                flex-direction: column;
+                row-gap: 4rem;
+            }
+        }
     }
 }
 
 .card-complexes {
+    position: relative;
+
     border-radius: 0 0 13.6rem 0;
 
     overflow: hidden;
@@ -243,16 +255,18 @@
 }
 
 .highlight {
+    margin-right: 0.5rem;
     padding: 0 2rem;
 
     border-radius: 7.3rem;
 
     color: $white;
+    line-height: 1;
 
     background-color: $pink;
 
     @media (max-width: 48em) {
-        padding: 0 3rem;
+        padding: 0.8rem 3rem;
         margin: 0 0.5rem;
 
         border-radius: 8.4rem;
