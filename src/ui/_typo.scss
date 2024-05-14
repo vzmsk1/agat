@@ -1,5 +1,5 @@
 .h {
-    font-weight: 600;
+    font-weight: 500;
     line-height: 110%;
 
     @media (max-width: 48em) {
@@ -20,12 +20,10 @@
         @media (min-width: 48em) {
             font-size: 5rem;
             line-height: 6.3rem;
-            font-weight: 500;
         }
     }
 
     &_h4 {
-        font-weight: 500;
         font-size: 4rem;
         line-height: 5.1rem;
 
