@@ -241,3 +241,20 @@
         }
     }
 }
+
+.highlight {
+    padding: 0 2rem;
+
+    border-radius: 7.3rem;
+
+    color: $white;
+
+    background-color: $pink;
+
+    @media (max-width: 48em) {
+        padding: 0 3rem;
+        margin: 0 0.5rem;
+
+        border-radius: 8.4rem;
+    }
+}
