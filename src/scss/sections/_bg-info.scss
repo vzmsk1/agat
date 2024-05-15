@@ -34,6 +34,10 @@
     &__title {
         margin-bottom: 4.8rem;
 
+        &_centered {
+            text-align: center;
+        }
+
         @media (min-width: 48em) {
             margin-bottom: 5rem;
 
@@ -44,6 +48,24 @@
     &__text {
         @media (min-width: 48em) {
             max-width: 134.1rem;
+        }
+    }
+
+    &__buttons {
+        display: flex;
+        gap: 4rem;
+
+        @media (max-width: 48em) {
+            flex-direction: column;
+            gap: 6.4rem;
+
+            .btn {
+                text-align: center;
+
+                &__txt {
+                    font-size: 2.9rem;
+                }
+            }
         }
     }
 

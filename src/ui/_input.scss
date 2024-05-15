@@ -33,6 +33,10 @@ input:focus {
 
     transition: border-bottom 0.5s ease;
 
+    &_pink {
+        background: url('./assets/images/bg-svg/liner-pink.svg') center / cover no-repeat;
+    }
+
     @media (max-width: 48em) {
         height: 10rem;
     }

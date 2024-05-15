@@ -78,6 +78,24 @@ function initSlidersOnResize() {
             });
         }
     }
+    if (document.querySelector('.exported-products__swiper')) {
+        new Swiper('.exported-products__swiper', {
+            modules: [Navigation],
+            speed: 800,
+            loop: true,
+            slidesPerView: 1,
+            spaceBetween: remToPx(4),
+            navigation: {
+                prevEl: '.exported-products .i-btn_arr-prev',
+                nextEl: '.exported-products .i-btn_arr-next'
+            },
+            breakpoints: {
+                768: {
+                    slidesPerView: 4
+                }
+            }
+        });
+    }
 }
 
 function initSliders() {}

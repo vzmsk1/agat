@@ -51,6 +51,12 @@
 
         background: linear-gradient(263.51deg, #b1934e -1.67%, #f2d790 35.23%, #b1934e 98.62%);
 
+        &_white {
+            background: $white;
+
+            color: $black;
+        }
+
         @media (max-width: 48em) {
             padding: 8rem 8rem 8rem 4rem;
 
@@ -85,6 +91,11 @@
 
     @media (max-width: 48em) {
         column-gap: 3.2rem;
+    }
+
+    &__text-content {
+        display: flex;
+        column-gap: 1rem;
     }
 
     &__icon {
