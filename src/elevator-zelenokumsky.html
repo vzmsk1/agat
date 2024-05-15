@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <script src="https://api-maps.yandex.ru/v3/?apikey=402f83d9-3e90-4726-b547-87890093893a&lang=ru_RU"></script>
+        <title>Элеватор "Зеленокумский"</title>
+    </head>
+    <body>
+        <div class="wrapper">
+            <include src="./components/header.html"></include>
+            <main>
+                <section class="hero">
+                    <div class="hero__container container">
+                        <span class="hero__title h h_h1">ООО «Зеленокумский элеватор»</span>
+                        <button type="button" class="hero__btn btn btn_pink">
+                            <span class="btn__txt">связаться с нами</span>
+                        </button>
+                    </div>
+                    <nav class="hero__nav">
+                        <a href="#" class="hero__nav-link txt30 txt30_md"><span>О холдинге</span></a>
+                        <a href="#" class="hero__nav-link txt30 txt30_md"
+                            ><span>Направления деятельности</span></a
+                        >
+                        <a href="#" class="hero__nav-link txt30 txt30_md"><span>Продукция</span></a>
+                        <a href="#" class="hero__nav-link txt30 txt30_md"><span>Пресс-центр</span></a>
+                        <a href="#" class="hero__nav-link txt30 txt30_md"><span>Экспорт</span></a>
+                        <a href="#" class="hero__nav-link txt30 txt30_md"><span>Контакты</span></a>
+                    </nav>
+                    <div class="hero__bg-wrap">
+                        <img
+                            src="./assets/images/bg/c9ba108ab828d20ab57bd2d728626e0b.webp"
+                            alt=""
+                            class="hero__bg"
+                        />
+                    </div>
+                </section>
+                <section class="info-complexes">
+                    <div class="info-complexes__container container">
+                        <div class="info-complexes__icon">
+                            <svg>
+                                <use href="#mill-svg"></use>
+                            </svg>
+                        </div>
+                        <span class="info-complexes__subtitle info-complexes__subtitle_vertical h h_h4"
+                            ><span>Хранение, перевалка сельхозпродукции.</span>
+                            <span
+                                >Сельхоз культуры:
+                                <span class="highlight">кукуруза</span>
+                                <span class="highlight">ячмень</span>
+                                <span class="highlight">пшеница</span></span
+                            >
+                        </span>
+                    </div>
+                </section>
+
+                <section class="elevator-characteristics">
+                    <div class="elevator-characteristics__bg-wrap">
+                        <img
+                            src="./assets/images/bg/74267a269ec5dce6f88c005e7b8f02db.webp"
+                            alt=""
+                            class="elevator-characteristics__bg"
+                        />
+                    </div>
+                    <div class="elevator-characteristics__container container">
+                        <div class="elevator-characteristics__content">
+                            <span class="elevator-characteristics__title h h_h2"
+                                >Характеристики элеватора</span
+                            >
+                            <ul class="elevator-characteristics__list">
+                                <li class="elevator-characteristics__item">
+                                    <span class="elevator-characteristics__subtitle h h_h4"
+                                        >Объём хранения 28 000 т</span
+                                    >
+                                    <ul class="elevator-characteristics__sublist">
+                                        <li class="elevator-characteristics__sublist-item h h_h5">
+                                            Навес — 10 000 т
+                                        </li>
+                                        <li class="elevator-characteristics__sublist-item h h_h5">
+                                            Возможно увеличение до 50 000 т
+                                        </li>
+                                        <li class="elevator-characteristics__sublist-item h h_h5">
+                                            Хранение напольное
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="elevator-characteristics__item">
+                                    <span class="elevator-characteristics__subtitle h h_h4"
+                                        >Мощность отгрузки</span
+                                    >
+                                    <ul class="elevator-characteristics__sublist">
+                                        <li class="elevator-characteristics__sublist-item h h_h5">
+                                            Ж/Д — 15 вагон/сутки
+                                        </li>
+                                        <li class="elevator-characteristics__sublist-item h h_h5">
+                                            АВТО — 700 тонн/сутки
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="elevator-characteristics__image-wrap">
+                            <img
+                                src="./assets/images/content/c5f866794caabc5dbb1cb2cba5313e0f.webp"
+                                alt=""
+                                class="elevator-characteristics__image"
+                            />
+                        </div>
+                    </div>
+                </section>
+
+                <include src="./components/_contacts-info.html"></include>
+                <include src="./components/_grid-section.html"></include>
+            </main>
+            <include src="./components/footer.html"></include>
+            <include src="./components/modals.html"></include>
+            <include src="./components/svg.html"></include>
+        </div>
+    </body>
+</html>

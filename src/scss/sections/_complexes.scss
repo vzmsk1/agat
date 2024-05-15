@@ -128,16 +128,20 @@
     }
 
     &__subtitle {
+        display: flex;
+        flex-direction: column;
         @media (min-width: 48em) {
-            max-width: 113.5rem;
+            &_text {
+                max-width: 122.5rem;
+            }
 
             text-align: center;
         }
         @media (max-width: 48em) {
-            &_vertical {
-                display: flex;
-                flex-direction: column;
-                row-gap: 4rem;
+            row-gap: 4rem;
+
+            .highlight {
+                line-height: 170%;
             }
         }
     }

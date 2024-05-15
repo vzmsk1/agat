@@ -1,131 +1,247 @@
+<!doctype html>
 <html lang="ru">
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>список страниц</title>
+        <script src="https://api-maps.yandex.ru/v3/?apikey=402f83d9-3e90-4726-b547-87890093893a&lang=ru_RU"></script>
+        <title>Элеватор "Март"</title>
     <script defer src="main.js"></script><link href="main.css" rel="stylesheet"></head>
     <body>
-        <div class="root">
-            <h2>список страниц:</h2>
-            <ol>
-                <li>
-                    <a target="_blank" href="./home.html">главная</a>
-                </li>
-                <li>
-                    <a target="_blank" href="./elevators.html">элеваторы</a>
-                </li>
-                <li>
-                    <a target="_blank" href="./elevator-galex.html">элеватор "Галэкс"</a>
-                </li>
-                <li>
-                    <a target="_blank" href="./elevator-mart.html">элеватор "Март"</a>
-                </li>
-                <li>
-                    <a target="_blank" href="./elevator-alexandrovsky.html">элеватор "Александровский"</a>
-                </li>
-                <li>
-                    <a target="_blank" href="./elevator-staromarievsky.html">элеватор "Старомарьевский"</a>
-                </li>
-                <li>
-                    <a target="_blank" href="./elevator-zelenokumsky.html">элеватор "Зеленокумский"</a>
-                </li>
-            </ol>
-            <h2>модалки:</h2>
-            <ol>
-                <li>
-                    <button type="button" data-modal="#"></button>
-                </li>
-            </ol>
-            <a target="_blank" href="./ui.html">*ui*</a>
+        <div class="wrapper">
+            <header class="header">
+    <div class="header__container container">
+        <a href="/" class="header__logo-wrap">
+            <img src="./assets/images/logo.svg" alt="" class="header__logo header__logo_light">
+            <img src="./assets/images/logo-dark.svg" alt="" class="header__logo header__logo_dark">
+        </a>
+        <button type="button" class="header__btn btn btn_pink">
+            <span class="btn__txt">связаться с нами</span>
+        </button>
+        <button type="button" class="header__hamburger-btn hamburger i-btn i-btn_bg">
+            <span class="hamburger__inner">
+                <span></span>
+                <span></span>
+                <span></span>
+            </span>
+        </button>
+    </div>
+    <div class="header__hamburger-menu hamburger-menu">
+        <div class="hamburger-menu__container container">
+            <nav class="hamburger-menu__nav">
+                <a href="#" class="hamburger-menu__nav-link">О холдинге</a>
+                <a href="#" class="hamburger-menu__nav-link">Направления деятельности</a>
+                <a href="#" class="hamburger-menu__nav-link">Продукция</a>
+                <a href="#" class="hamburger-menu__nav-link">Пресс-центр</a>
+                <a href="#" class="hamburger-menu__nav-link">Экспорт</a>
+                <a href="#" class="hamburger-menu__nav-link">Контакты</a>
+            </nav>
         </div>
-        <style>
-            @charset "UTF-8";
-            @import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@200&display=swap');
-            * {
-                padding: 0;
-                margin: 0;
-                border: 0;
-                box-sizing: border-box;
-            }
-            html,
-            body {
-                margin: 0;
-                padding: 0;
-                height: 100%;
-                width: 100%;
-                min-width: 32rem;
-                background-color: #ffffff;
-                color: #202020;
-            }
-            html {
-                font-size: 0.5208335vw;
-            }
-            body {
-                padding: 5rem 0;
-                font-size: 100%;
-                line-height: 1;
-                font-size: 1.8rem;
-                user-select: none;
-            }
-            .root {
-                font-family: 'Source Code Pro';
-            }
-            .root ul,
-            .root ol {
-                margin-bottom: 10rem;
-            }
-            .root ul li,
-            .root ol li {
-                font-size: 2.3rem;
-            }
-            .root li {
-                margin-bottom: 2rem;
-                font-size: 2rem;
-                text-transform: lowercase;
-            }
-            .root a {
-                text-decoration: none;
-            }
-            .root a {
-                color: #202020;
-                transition: color 0.5s ease;
-            }
-            .root a:visited {
-                text-decoration: none;
-                color: #202020;
-            }
-            .root a:hover {
-                color: #202020;
-                text-decoration: underline;
-            }
-            .root h1 {
-                margin-bottom: 5rem;
-                font-size: 5rem;
-                font-weight: 300;
-                text-align: center;
-            }
-            .root h2 {
-                margin-bottom: 2.5rem;
-                font-size: 2.5rem;
-                font-weight: 300;
-            }
-            .root {
-                padding: 5rem;
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-            }
-            @media (max-width: 48em) {
-                html {
-                    font-size: calc((100 / 375) * 5vw);
-                }
-                body {
-                    font-size: 2.8rem;
-                }
-            }
-        </style>
-        
-        <svg display="none">
+    </div>
+</header>
+
+            <main>
+                <section class="hero">
+                    <div class="hero__container container">
+                        <span class="hero__title h h_h1">ООО Компания «Март»</span>
+                        <button type="button" class="hero__btn btn btn_pink">
+                            <span class="btn__txt">связаться с нами</span>
+                        </button>
+                    </div>
+                    <nav class="hero__nav">
+                        <a href="#" class="hero__nav-link txt30 txt30_md"><span>О холдинге</span></a>
+                        <a href="#" class="hero__nav-link txt30 txt30_md"
+                            ><span>Направления деятельности</span></a
+                        >
+                        <a href="#" class="hero__nav-link txt30 txt30_md"><span>Продукция</span></a>
+                        <a href="#" class="hero__nav-link txt30 txt30_md"><span>Пресс-центр</span></a>
+                        <a href="#" class="hero__nav-link txt30 txt30_md"><span>Экспорт</span></a>
+                        <a href="#" class="hero__nav-link txt30 txt30_md"><span>Контакты</span></a>
+                    </nav>
+                    <div class="hero__bg-wrap">
+                        <img
+                            src="./assets/images/bg/5f47af74710c7ef9d5f348ad058649dd.webp"
+                            alt=""
+                            class="hero__bg"
+                        />
+                    </div>
+                </section>
+                <section class="info-complexes">
+                    <div class="info-complexes__container container">
+                        <div class="info-complexes__icon">
+                            <svg>
+                                <use href="#mill-svg"></use>
+                            </svg>
+                        </div>
+                        <span class="info-complexes__subtitle info-complexes__subtitle_vertical h h_h4"
+                            ><span>Хранение, очистка, подработка сельхозпродукции.</span>
+                            <span>Транспортная доступность: ж/д транспорт и автотранспорт</span>
+                            <span
+                                >Сельхоз культуры: <span class="highlight">ячмень</span> и
+                                <span class="highlight">пшеница</span></span
+                            >
+                        </span>
+                    </div>
+                </section>
+
+                <section class="elevator-characteristics">
+                    <div class="elevator-characteristics__bg-wrap">
+                        <img
+                            src="./assets/images/bg/067a19bf4fdf7b825c6db34299b6b6d0.webp"
+                            alt=""
+                            class="elevator-characteristics__bg"
+                        />
+                    </div>
+                    <div class="elevator-characteristics__container container">
+                        <div class="elevator-characteristics__content">
+                            <span class="elevator-characteristics__title h h_h2"
+                                >Характеристики элеватора</span
+                            >
+                            <ul class="elevator-characteristics__list">
+                                <li class="elevator-characteristics__item">
+                                    <span class="elevator-characteristics__subtitle h h_h4"
+                                        >Объём хранения 25 000 т</span
+                                    >
+                                    <ul class="elevator-characteristics__sublist">
+                                        <li class="elevator-characteristics__sublist-item h h_h5">
+                                            Хранение напольное
+                                        </li>
+                                        <li class="elevator-characteristics__sublist-item h h_h5">
+                                            Есть очистка и подработка
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="elevator-characteristics__item">
+                                    <span class="elevator-characteristics__subtitle h h_h4"
+                                        >Мощность отгрузки</span
+                                    >
+                                    <ul class="elevator-characteristics__sublist">
+                                        <li class="elevator-characteristics__sublist-item h h_h5">
+                                            Ж/Д — 15 вагонов/сутки
+                                        </li>
+                                        <li class="elevator-characteristics__sublist-item h h_h5">
+                                            АВТО — 500 тонн /сутки
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="elevator-characteristics__image-wrap">
+                            <img
+                                src="./assets/images/content/1dda5f087a173d8f09335f0b8a532437.webp"
+                                alt=""
+                                class="elevator-characteristics__image"
+                            />
+                        </div>
+                    </div>
+                </section>
+
+                <section class="contacts-info">
+    <div id="contacts-map" class="contacts-info__map"></div>
+    <div class="contacts-info__container container">
+        <div class="contacts-info__content">
+            <span class="contacts-info__title h h_h2">Контакты</span>
+            <ul class="contacts-info__list">
+                <li class="contacts-info__item list-i-item">
+                    <div class="list-i-item__icon">
+                        <svg>
+                            <use href="#location-svg"></use>
+                        </svg>
+                    </div>
+                    <span class="list-i-item__text txt30 txt30_md">Ставропольский край, Буденновский район, с.&nbsp;Стародубское, ул.&nbsp;Вокзальная, 1</span>
+                </li>
+                <li class="contacts-info__item list-i-item">
+                    <div class="list-i-item__icon">
+                        <svg>
+                            <use href="#phone-svg"></use>
+                        </svg>
+                    </div>
+                    <span class="list-i-item__text txt30 txt30_md">
+                        <a href="tel:78655964450">+7 86559 64450,</a>
+                        <a href="tel:78655964228">+7 86559 64228</a>
+                    </span>
+                </li>
+                <li class="contacts-info__item list-i-item">
+                    <div class="list-i-item__icon">
+                        <svg>
+                            <use href="#letter-svg"></use>
+                        </svg>
+                    </div>
+                    <span class="list-i-item__text txt30 txt30_md">
+                        <a href="mailto:zao.galex@yandex.ru">zao.galex@yandex.ru</a>
+                    </span>
+                </li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+                <section class="grid-section">
+    <div class="grid-section__container container">
+        <span class="grid-section__title h h_h1">Ещё&nbsp;4&nbsp;наших элеватора</span>
+        <ul class="grid-section__grid">
+            <li class="grid-section__item card-complexes">
+                <a href="#" class="card-complexes__inner">
+                    <div class="card-complexes__content">
+                        <span class="card-complexes__title h h_h4">Старомарьевский</span>
+                    </div>
+                    <div class="card-complexes__image-wrap">
+                        <img src="./assets/images/bg/9467aab856188c319fbcd02c80a53224.webp" alt="" class="card-complexes__image">
+                    </div>
+                </a>
+            </li>
+            <li class="grid-section__item card-complexes">
+                <a href="#" class="card-complexes__inner">
+                    <div class="card-complexes__content">
+                        <span class="card-complexes__title h h_h4">Старомарьевский</span>
+                    </div>
+                    <div class="card-complexes__image-wrap">
+                        <img src="./assets/images/bg/3c3bfc9510b5e1541d7c962147a65ecc.webp" alt="" class="card-complexes__image">
+                    </div>
+                </a>
+            </li>
+            <li class="grid-section__item card-complexes">
+                <a href="#" class="card-complexes__inner">
+                    <div class="card-complexes__content">
+                        <span class="card-complexes__title h h_h4">Старомарьевский</span>
+                    </div>
+                    <div class="card-complexes__image-wrap">
+                        <img src="./assets/images/bg/41f84c032191b1d8d5314d9ea3d829a8.webp" alt="" class="card-complexes__image">
+                    </div>
+                </a>
+            </li>
+            <li class="grid-section__item card-complexes">
+                <a href="#" class="card-complexes__inner">
+                    <div class="card-complexes__content">
+                        <span class="card-complexes__title h h_h4">Старомарьевский</span>
+                    </div>
+                    <div class="card-complexes__image-wrap">
+                        <img src="./assets/images/bg/MAX0064.webp" alt="" class="card-complexes__image">
+                    </div>
+                </a>
+            </li>
+        </ul>
+    </div>
+</section>
+
+            </main>
+            <footer class="footer">
+    <div class="footer__container container">
+        <a href="/" class="footer__logo-wrap">
+            <img src="./assets/images/logo-dark.svg" alt="" class="footer__logo">
+        </a>
+        <nav class="footer__nav">
+            <a href="#" class="footer__nav-link txt30 txt30_md">О компании</a>
+            <a href="#" class="footer__nav-link txt30 txt30_md">Бизнес</a>
+            <a href="#" class="footer__nav-link txt30 txt30_md">Экспорт</a>
+            <a href="#" class="footer__nav-link txt30 txt30_md">Пресс-центр</a>
+            <a href="#" class="footer__nav-link txt30 txt30_md">Карьера</a>
+            <a href="#" class="footer__nav-link txt30 txt30_md">Контакты</a>
+        </nav>
+    </div>
+</footer>
+
+            
+            <svg display="none">
     <symbol id="arr-left-svg" viewBox="0 0 28 30">
         <path d="M26 13C27.1046 13 28 13.8954 28 15C28 16.1046 27.1046 17 26 17V13ZM0.585787 16.4142C-0.195263 15.6332 -0.195263 14.3668 0.585787 13.5858L13.3137 0.857864C14.0948 0.0768156 15.3611 0.0768156 16.1421 0.857864C16.9232 1.63891 16.9232 2.90524 16.1421 3.68629L4.82843 15L16.1421 26.3137C16.9232 27.0948 16.9232 28.3611 16.1421 29.1421C15.3611 29.9232 14.0948 29.9232 13.3137 29.1421L0.585787 16.4142ZM26 17H2V13H26V17Z" fill="#3C4243"></path>
     </symbol>
@@ -200,5 +316,6 @@
     </svg>
 </svg>
 
+        </div>
     </body>
 </html>
