@@ -118,6 +118,17 @@
 
 .info-complexes {
     &__icon {
+        &_cow {
+            svg {
+                width: 21.5rem;
+                height: 13.7rem;
+
+                @media (max-width: 48em) {
+                    width: 23.2rem;
+                    height: 15rem;
+                }
+            }
+        }
         &_truck {
             svg {
                 width: 15rem;

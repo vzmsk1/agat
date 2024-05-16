@@ -1,0 +1,7 @@
+.banner {
+    margin-bottom: 15rem;
+
+    @media (max-width: 48em) {
+        margin-bottom: 16rem;
+    }
+}

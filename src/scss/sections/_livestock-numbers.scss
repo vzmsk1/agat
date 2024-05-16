@@ -1,0 +1,134 @@
+.livestock-numbers {
+    position: relative;
+
+    &::after {
+        content: '';
+
+        position: absolute;
+        z-index: -1;
+        top: 0;
+        left: 0;
+
+        width: 100%;
+        height: 70%;
+
+        background: linear-gradient(263.51deg, #b1934e -1.67%, #f2d790 35.23%, #b1934e 98.62%);
+
+        @media (max-width: 48em) {
+            height: 90%;
+        }
+    }
+
+    &__container {
+        padding-top: 15rem;
+
+        @media (max-width: 48em) {
+            &.container {
+                padding: 16rem 4rem 0 4rem;
+            }
+        }
+    }
+
+    &__cards {
+        display: grid;
+        gap: 4rem;
+        width: 100%;
+
+        @media (min-width: 48em) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+
+    &__card {
+        @media (min-width: 48em) {
+            &_large {
+                grid-column: span 2;
+                border-radius: 0 10rem 0 0;
+            }
+
+            &:first-child {
+                border-radius: 10rem 0 0 0;
+            }
+
+            &:nth-child(2) {
+                border-radius: 0 0 10rem 0;
+            }
+        }
+    }
+}
+
+.card-livestock-numbers {
+    overflow: hidden;
+
+    @media (max-width: 48em) {
+        border-radius: 8.8rem 0 8.8rem 0;
+    }
+
+    &__inner {
+        position: relative;
+
+        display: flex;
+        min-height: 60.4rem;
+
+        @media (max-width: 48em) {
+            min-height: 76rem;
+        }
+    }
+
+    &__content {
+        position: relative;
+        z-index: 2;
+
+        padding: 4rem;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        row-gap: 1.2rem;
+        min-height: 100%;
+
+        color: $white;
+
+        @media (max-width: 48em) {
+            padding: 4.2rem 2.4rem;
+
+            row-gap: 2rem;
+        }
+    }
+
+    &__subtitle {
+        @media (max-width: 48em) {
+            font-weight: 700;
+            font-size: 4rem;
+            line-height: 110%;
+        }
+    }
+
+    &__image-wrap {
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        width: 100%;
+        height: 100%;
+
+        &::after {
+            content: '';
+
+            position: absolute;
+            top: 0;
+            left: 0;
+
+            width: 100%;
+            height: 100%;
+
+            background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.3) 80.3%);
+        }
+    }
+
+    &__image {
+        height: 100%;
+
+        object-fit: cover;
+    }
+}

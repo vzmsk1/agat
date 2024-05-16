@@ -1,0 +1,151 @@
+.fattening {
+    &__container {
+        padding-top: 15rem;
+
+        @media (max-width: 48em) {
+            padding: 16rem 4rem 0 4rem;
+        }
+    }
+
+    &__main {
+        position: relative;
+
+        margin-bottom: 15rem;
+
+        display: flex;
+        flex-direction: column;
+
+        color: $white;
+
+        &::after {
+            content: '';
+
+            position: absolute;
+            z-index: -1;
+            top: 0;
+            left: 0;
+
+            width: 100%;
+            height: 90%;
+
+            background: linear-gradient(
+                236.5deg,
+                #c10b73 -4.18%,
+                #b6136d 13.92%,
+                #f55bb2 30.54%,
+                #b6136d 49.38%,
+                #f55bb2 66.56%,
+                #b6136d 83.74%,
+                #c10b73 106.46%
+            );
+        }
+
+        @media (max-width: 48em) {
+            margin-bottom: 16rem;
+
+            &::after {
+                height: 78%;
+            }
+        }
+    }
+
+    &__title {
+        margin-bottom: 4.8rem;
+
+        @media (min-width: 48em) {
+            margin-bottom: 3.2rem;
+
+            max-width: 130.4rem;
+        }
+    }
+
+    &__body {
+        display: flex;
+        gap: 7.5rem;
+
+        @media (max-width: 48em) {
+            flex-direction: column;
+            gap: 6.4rem;
+        }
+    }
+
+    &__text-wrap {
+        display: flex;
+        flex-direction: column;
+        row-gap: 2rem;
+
+        @media (max-width: 48em) {
+            row-gap: 4rem;
+        }
+    }
+
+    &__image-wrap {
+        height: 75.2rem;
+        border-radius: 20rem 0 0 0;
+
+        overflow: hidden;
+
+        @media (min-width: 48em) {
+            flex: 0 0 66.4rem;
+            width: 66.4rem;
+            height: 69.4rem;
+            border-radius: 10rem 0 0 0;
+        }
+    }
+
+    &__image {
+        height: 100%;
+
+        object-fit: cover;
+    }
+}
+
+.info-fattening {
+    &__container {
+        display: flex;
+        gap: 4rem;
+
+        @media (max-width: 48em) {
+            flex-direction: column-reverse;
+            gap: 6.4rem;
+        }
+    }
+
+    &__image-wrap {
+        height: 61.6rem;
+        border-radius: 8.8rem 0;
+
+        overflow: hidden;
+
+        @media (min-width: 48em) {
+            flex: 0 0 75.7rem;
+            width: 75.7rem;
+            height: 69.4rem;
+            border-radius: 10rem 0;
+        }
+    }
+
+    &__image {
+        height: 100%;
+
+        object-fit: cover;
+    }
+
+    &__content {
+        align-self: center;
+    }
+
+    &__text-wrap {
+        display: flex;
+        flex-direction: column;
+
+        font-weight: 600;
+
+        @media (min-width: 48em) {
+            row-gap: 2rem;
+            max-width: 55rem;
+
+            font-weight: 400;
+        }
+    }
+}
