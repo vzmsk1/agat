@@ -1,0 +1,90 @@
+.supplies-geography {
+    background-color: $white;
+
+    &__container {
+        margin-bottom: 5rem;
+        padding-top: 15rem;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        text-align: center;
+
+        @media (max-width: 48em) {
+            &.container {
+                margin-bottom: 0rem;
+                padding: 16rem 4rem 0 4rem;
+            }
+        }
+    }
+
+    &__title {
+        margin-bottom: 3.2rem;
+
+        @media (max-width: 48em) {
+            margin-bottom: 4.8rem;
+        }
+    }
+
+    &__text {
+        margin-bottom: 6rem;
+
+        @media (min-width: 48em) {
+            margin-bottom: 0;
+
+            max-width: 62.6rem;
+        }
+    }
+
+    &__map {
+        width: 100%;
+        height: 81.1rem;
+
+        svg {
+            width: 100%;
+            height: 100%;
+        }
+
+        @media (max-width: 48em) {
+            width: 75rem;
+            height: 76rem;
+
+            overflow-x: auto;
+
+            -ms-overflow-style: none; /* Internet Explorer 10+ */
+            scrollbar-width: none; /* Firefox */
+
+            &::-webkit-scrollbar {
+                display: none; /* Safari and Chrome */
+            }
+
+            svg {
+                width: 140rem;
+                height: 100%;
+            }
+        }
+
+        text tspan {
+            text-align: center;
+        }
+    }
+}
+
+#supplies-geography-map-text {
+    text tspan {
+        font-weight: 700;
+        font-size: 30px;
+        line-height: 38rem;
+        fill: $black;
+    }
+}
+
+#supplies-geography-map-marks {
+    text tspan {
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 30px;
+        fill: $pink;
+    }
+}

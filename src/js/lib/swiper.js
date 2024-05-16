@@ -5,7 +5,7 @@ import { Navigation, Pagination } from 'swiper/modules';
 
 const mm = window.matchMedia('(max-width: 768px)');
 
-function initSlidersOnResize() {
+function initSliders() {
     if (document.querySelector('.activities__swiper')) {
         new Swiper('.activities__swiper', {
             modules: [Navigation, Pagination],
@@ -96,13 +96,33 @@ function initSlidersOnResize() {
             }
         });
     }
+    if (document.querySelector('.certificates__swiper')) {
+        new Swiper('.certificates__swiper', {
+            modules: [Navigation, Pagination],
+            speed: 800,
+            loop: true,
+            slidesPerView: 1,
+            autoHeight: true,
+            spaceBetween: remToPx(4),
+            navigation: {
+                prevEl: '.certificates .i-btn_arr-prev',
+                nextEl: '.certificates .i-btn_arr-next'
+            },
+            pagination: {
+                el: '.certificates__pagination',
+                type: 'bullets',
+                clickable: true
+            },
+            breakpoints: {
+                768: {
+                    slidesPerView: 4,
+                    autoHeight: false
+                }
+            }
+        });
+    }
 }
-
-function initSliders() {}
-
-mm.addEventListener('change', initSlidersOnResize);
 
 document.addEventListener('DOMContentLoaded', function () {
     initSliders();
-    initSlidersOnResize();
 });
