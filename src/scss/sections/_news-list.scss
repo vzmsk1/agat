@@ -1,0 +1,154 @@
+.news-list {
+    &__container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__tabs {
+        margin-bottom: 10rem;
+
+        display: flex;
+
+        .tab {
+            width: 50%;
+
+            &:first-child {
+                padding-right: 0;
+
+                border-radius: 5rem 0 0 0;
+
+                .tab__inner {
+                    border-radius: 5rem 0 0 0;
+                }
+            }
+        }
+
+        @media (max-width: 48em) {
+            margin-bottom: 8rem;
+
+            .tab {
+                &:first-child {
+                    border-radius: 8rem 0 0 0;
+
+                    .tab__inner {
+                        border-radius: 8rem 0 0 0;
+                    }
+                }
+            }
+        }
+    }
+
+    &__cards {
+        margin-bottom: 8rem;
+
+        display: grid;
+        gap: 4rem;
+        width: 100%;
+
+        @media (min-width: 48em) {
+            margin-bottom: 4rem;
+
+            grid-template-columns: repeat(3, 1fr);
+            grid-auto-rows: 1fr;
+
+            &_gallery {
+                grid-auto-rows: 36.8rem;
+            }
+
+            .card-news {
+                &__inner {
+                    height: 76rem;
+                }
+            }
+        }
+    }
+
+    &__gallery-card {
+        @media (min-width: 48em) {
+            &_large {
+                grid-column: span 2;
+                grid-row: span 2;
+            }
+        }
+    }
+
+    &__card {
+        @media (min-width: 48em) {
+            &_large {
+                grid-column: span 2;
+                grid-row: span 1;
+
+                .card-news__inner {
+                    border-radius: 0 10rem 10rem 10rem;
+                }
+            }
+        }
+    }
+
+    &__btn {
+        align-self: center;
+    }
+}
+
+.tab {
+    padding: 0.3rem;
+
+    border-radius: 0 0 5rem 0;
+
+    background: linear-gradient(263.51deg, #b1934e -1.67%, #f2d790 35.23%, #b1934e 98.62%);
+
+    &._is-active {
+        .tab__inner {
+            color: $white;
+
+            background: linear-gradient(263.51deg, #b1934e -1.67%, #f2d790 35.23%, #b1934e 98.62%);
+        }
+    }
+
+    @media (max-width: 48em) {
+        padding: 0.6rem;
+
+        border-radius: 0 0 8rem 0;
+    }
+
+    &__inner {
+        padding: 4rem;
+
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        border-radius: 0 0 5rem 0;
+
+        background-color: $white;
+
+        @media (max-width: 48em) {
+            border-radius: 0 0 8rem 0;
+
+            font-size: 4rem;
+            line-height: 4.4rem;
+        }
+    }
+}
+
+.gallery-card-news-list {
+    border-radius: 10rem 0 0 0;
+
+    overflow: hidden;
+
+    @media (max-width: 48em) {
+        height: 50rem;
+        border-radius: 14rem 0 0 0;
+    }
+
+    &__image-wrap {
+        height: 100%;
+    }
+
+    &__image {
+        height: 100%;
+
+        object-fit: cover;
+    }
+}

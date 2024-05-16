@@ -140,6 +140,10 @@
 
     &__bg-wrap {
         flex: 1 1 auto;
+
+        @media (min-width: 48em) {
+            max-height: 48rem;
+        }
     }
 
     &__bg {

@@ -44,6 +44,9 @@ import './lib/map';
 // input mask
 import './lib/inputmask';
 
+// videojs
+import './lib/video';
+
 // --------------------------------------------------------------------------
 
 import './dev/vzmsk1.js';
