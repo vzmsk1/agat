@@ -1,7 +1,7 @@
 import Swiper from 'swiper';
 import 'swiper/css';
 import { remToPx } from '../utils/utils';
-import { Navigation, Pagination } from 'swiper/modules';
+import { Navigation, Pagination, EffectFade } from 'swiper/modules';
 
 const mm = window.matchMedia('(max-width: 768px)');
 
@@ -118,6 +118,25 @@ function initSliders() {
                     slidesPerView: 4,
                     autoHeight: false
                 }
+            }
+        });
+    }
+    if (document.querySelector('.news-chapter__swiper')) {
+        new Swiper('.news-chapter__swiper', {
+            modules: [Navigation, Pagination, EffectFade],
+            speed: 800,
+            loop: true,
+            slidesPerView: 1,
+            spaceBetween: remToPx(4),
+            effect: 'fade',
+            navigation: {
+                prevEl: '.news-chapter .i-btn_arr-prev',
+                nextEl: '.news-chapter .i-btn_arr-next'
+            },
+            pagination: {
+                el: '.news-chapter__pagination',
+                type: 'bullets',
+                clickable: true
             }
         });
     }
