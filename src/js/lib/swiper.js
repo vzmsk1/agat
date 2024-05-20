@@ -170,6 +170,30 @@ function initSliders() {
             }
         });
     }
+
+    if (document.querySelector('.laboratory__swiper')) {
+        new Swiper('.laboratory__swiper', {
+            modules: [Pagination],
+            speed: 800,
+            loop: true,
+            slidesPerView: 1,
+            spaceBetween: remToPx(4),
+            navigation: {
+                prevEl: '.laboratory .i-btn_arr-prev',
+                nextEl: '.laboratory .i-btn_arr-next'
+            },
+            pagination: {
+                el: '.laboratory__pagination',
+                type: 'bullets',
+                clickable: true
+            },
+            breakpoints: {
+                768: {
+                    slidesPerView: 2
+                }
+            }
+        });
+    }
 }
 
 document.addEventListener('DOMContentLoaded', function () {

@@ -117,6 +117,14 @@
 }
 
 .info-complexes {
+    &_mills {
+        .info-complexes {
+            &__subtitle {
+                max-width: 129.7rem;
+            }
+        }
+    }
+
     &__icon {
         &_cow {
             svg {

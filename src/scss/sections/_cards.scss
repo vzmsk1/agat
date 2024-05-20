@@ -1,0 +1,108 @@
+.cards_pink.cards::after {
+    background: linear-gradient(
+        236.5deg,
+        #c10b73 -4.18%,
+        #b6136d 13.92%,
+        #f55bb2 30.54%,
+        #b6136d 49.38%,
+        #f55bb2 66.56%,
+        #b6136d 83.74%,
+        #c10b73 106.46%
+    );
+
+    @media (max-width: 48em) {
+        height: 86%;
+    }
+}
+
+.cards {
+    position: relative;
+
+    &_pink {
+        .cards {
+            &__card {
+                @media (min-width: 48em) {
+                    min-height: 60rem;
+                    border-radius: 0 0 13.6rem 0;
+                }
+            }
+        }
+    }
+
+    &::after {
+        content: '';
+
+        position: absolute;
+        z-index: -1;
+        top: 0;
+        left: 0;
+
+        width: 100%;
+        height: 80%;
+
+        background: linear-gradient(263.51deg, #b1934e -1.67%, #f2d790 35.23%, #b1934e 98.62%);
+
+        @media (max-width: 48em) {
+            height: 92%;
+        }
+    }
+
+    &__container {
+        padding-top: 15rem;
+
+        @media (max-width: 48em) {
+            &.container {
+                padding: 16rem 4rem 0 4rem;
+            }
+        }
+    }
+
+    &__list {
+        display: grid;
+        gap: 4rem;
+        width: 100%;
+
+        @media (min-width: 48em) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+
+    &__card {
+        min-height: 76rem;
+
+        .card-achievements {
+            &__subtitle {
+                max-width: 60rem;
+            }
+        }
+
+        @media (min-width: 48em) {
+            min-height: 86.3rem;
+
+            &_large {
+                grid-column: span 2;
+            }
+
+            &:not(.cards_pink &) {
+                &:first-child {
+                    border-radius: 10rem 0 10rem 10rem;
+                }
+                &:nth-child(2) {
+                    border-radius: 0 0 10rem 0;
+                }
+                &:nth-child(3) {
+                    border-radius: 10rem 0 0 0;
+                }
+                &:nth-child(4) {
+                    border-radius: 10rem 0 10rem 10rem;
+                }
+            }
+
+            .card-achievements {
+                &__subtitle {
+                    max-width: 64rem;
+                }
+            }
+        }
+    }
+}
