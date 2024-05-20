@@ -1,0 +1,148 @@
+.contacts {
+    display: flex;
+    flex-direction: column;
+    row-gap: 4.8rem;
+
+    @media (min-width: 48em) {
+        flex-direction: row;
+        height: 90rem;
+    }
+
+    &__list-wrap {
+        padding-right: 0.8rem;
+
+        height: 100%;
+        max-height: 118.2rem;
+
+        background-color: #cccccc;
+
+        @media (min-width: 48em) {
+            padding-right: 0.6rem;
+
+            flex: 1 1 auto;
+            max-height: none;
+        }
+    }
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+
+        background-color: $white;
+    }
+
+    &__list-item {
+        position: relative;
+
+        padding: 3.2rem 4rem 3.2rem 18rem;
+
+        display: flex;
+        flex-direction: column;
+
+        &._is-active {
+            &::before {
+                opacity: 1;
+            }
+            &::after {
+                opacity: 0;
+            }
+        }
+
+        &::before {
+            content: '';
+
+            position: absolute;
+            top: -2px;
+            left: 0;
+
+            width: 100%;
+            height: 100%;
+
+            background: linear-gradient(263.51deg, #b1934e -1.67%, #f2d790 35.23%, #b1934e 98.62%);
+
+            opacity: 0;
+
+            transition: opacity 0.3s ease;
+        }
+
+        &::after {
+            content: '';
+
+            position: absolute;
+            bottom: 0;
+            left: 18rem;
+
+            width: calc(100% - 22.5rem);
+            height: 2px;
+
+            background: linear-gradient(298.18deg, #ebc76b 0%, #fee6aa 48.27%, #ecc96f 100%);
+
+            transition: opacity 0.3s ease;
+        }
+
+        @media (max-width: 48em) {
+            padding: 4rem;
+
+            &::after {
+                left: 0;
+
+                width: 100vw;
+            }
+        }
+    }
+
+    &__subtitle {
+        position: relative;
+        z-index: 2;
+
+        margin-bottom: 3.2rem;
+
+        @media (max-width: 48em) {
+            margin-bottom: 4.8rem;
+
+            font-weight: 600;
+            font-size: 4.8rem;
+            line-height: 110%;
+        }
+    }
+
+    &__map {
+        height: 62.2rem;
+
+        @media (min-width: 48em) {
+            flex: 0 0 97.5rem;
+            width: 97.5rem;
+            height: 100%;
+        }
+    }
+
+    &__sublist {
+        position: relative;
+        z-index: 2;
+
+        display: flex;
+        flex-direction: column;
+        row-gap: 2.4rem;
+
+        @media (max-width: 48em) {
+            row-gap: 4.8rem;
+        }
+    }
+}
+
+#contacts-list-map {
+    .marker {
+        cursor: pointer;
+
+        &._is-active {
+            path {
+                fill: $pink;
+            }
+        }
+
+        path {
+            fill: #6f7070;
+            transition: fill 0.3s ease;
+        }
+    }
+}

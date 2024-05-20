@@ -140,6 +140,36 @@ function initSliders() {
             }
         });
     }
+    if (document.querySelector('.plants-info__list-wrap') && window.innerWidth <= 768) {
+        new Swiper('.plants-info__list-wrap', {
+            modules: [Pagination],
+            speed: 800,
+            loop: true,
+            slidesPerView: 1,
+            spaceBetween: remToPx(4),
+            pagination: {
+                el: '.plants-info__pagination',
+                type: 'bullets',
+                clickable: true
+            }
+        });
+    }
+
+    if (document.querySelector('.advantages__swiper') && window.innerWidth <= 768) {
+        new Swiper('.advantages__swiper', {
+            modules: [Pagination],
+            speed: 800,
+            loop: true,
+            autoHeight: true,
+            slidesPerView: 1,
+            spaceBetween: remToPx(4),
+            pagination: {
+                el: '.advantages__pagination',
+                type: 'bullets',
+                clickable: true
+            }
+        });
+    }
 }
 
 document.addEventListener('DOMContentLoaded', function () {

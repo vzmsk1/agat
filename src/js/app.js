@@ -47,6 +47,9 @@ import './lib/inputmask';
 // videojs
 import './lib/video';
 
+// simplebar
+import './lib/simplebar';
+
 // --------------------------------------------------------------------------
 
 import './dev/vzmsk1.js';

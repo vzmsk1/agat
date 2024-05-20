@@ -1,0 +1,242 @@
+.plants-info {
+    display: flex;
+    flex-direction: column;
+
+    &__container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        text-align: center;
+    }
+
+    &__main {
+        position: relative;
+
+        margin-bottom: 15rem;
+
+        .container {
+            padding-top: 15rem;
+        }
+
+        @media (max-width: 48em) {
+            margin-bottom: 16rem;
+
+            .container {
+                padding-top: 16rem;
+            }
+        }
+    }
+
+    &__pagination {
+        @media (min-width: 48em) {
+            display: none;
+        }
+    }
+
+    &__title {
+        margin-bottom: 4.8rem;
+
+        color: $white;
+
+        @media (min-width: 48em) {
+            margin-bottom: 3.2rem;
+
+            max-width: 114.9rem;
+        }
+        @media (max-width: 48em) {
+            span {
+                display: block;
+            }
+        }
+    }
+
+    &__text {
+        margin-bottom: 9rem;
+
+        color: $white;
+
+        @media (min-width: 48em) {
+            margin-bottom: 22.2rem;
+
+            max-width: 120.2rem;
+        }
+    }
+
+    &__list-wrap {
+        &.swiper {
+            width: 100%;
+
+            @media (max-width: 48em) {
+                margin-bottom: 4.8rem;
+            }
+        }
+    }
+
+    &__list {
+        @media (min-width: 48em) {
+            &.swiper-wrapper {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                column-gap: 4rem;
+            }
+        }
+    }
+
+    &__list-item {
+        &.swiper-slide {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 15.6rem;
+            box-shadow: 0.6rem 0.6rem 7rem rgba(98, 98, 98, 0.2);
+            border-radius: 0 10rem 0 0;
+
+            background: linear-gradient(263.51deg, #b1934e -1.67%, #f2d790 35.23%, #b1934e 98.62%);
+
+            color: $pink;
+
+            @media (max-width: 48em) {
+                min-height: 28rem;
+                border-radius: 0 8.8rem 0 0;
+            }
+        }
+    }
+
+    &__list-item-txt {
+        max-width: 44rem;
+
+        @media (max-width: 48em) {
+            max-width: none;
+
+            font-size: 4rem;
+            line-height: 4.4rem;
+        }
+    }
+
+    &__bg-wrap {
+        position: absolute;
+        z-index: -1;
+        top: 0;
+        left: 0;
+
+        width: 100%;
+        height: 92%;
+
+        &::after {
+            content: '';
+
+            position: absolute;
+            top: 0;
+            left: 0;
+
+            width: 100%;
+            height: 100%;
+
+            background: linear-gradient(180deg, rgba(14, 18, 53, 0.2) 19.78%, rgba(14, 18, 53, 0) 65.8%);
+        }
+
+        @media (max-width: 48em) {
+            height: 85%;
+        }
+    }
+
+    &__bg {
+        height: 100%;
+
+        object-fit: cover;
+    }
+
+    &__subtitle {
+        margin-bottom: 5rem;
+
+        @media (max-width: 48em) {
+            display: none;
+        }
+    }
+
+    &__cards-list {
+        display: grid;
+        gap: 4rem;
+        width: 100%;
+
+        @media (min-width: 48em) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+}
+
+.card-plants-info {
+    position: relative;
+
+    border-radius: 10rem 0;
+
+    overflow: hidden;
+
+    @media (max-width: 48em) {
+        border-radius: 8.8rem 0;
+    }
+
+    &__inner {
+    }
+
+    &__content {
+        padding: 4rem;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        row-gap: 1.2rem;
+        min-height: 72rem;
+
+        text-align: left;
+        color: $white;
+
+        @media (max-width: 48em) {
+            padding: 4.8rem 2.8rem;
+
+            row-gap: 2rem;
+            min-height: 76rem;
+        }
+    }
+
+    &__subtitle {
+        @media (min-width: 48em) {
+            max-width: 43rem;
+        }
+        @media (max-width: 48em) {
+            font-weight: 700;
+            font-size: 4rem;
+            line-height: 110%;
+        }
+    }
+
+    &__bg-wrap {
+        position: absolute;
+        z-index: -1;
+        top: 0;
+        left: 0;
+
+        width: 100%;
+        height: 100%;
+
+        &::after {
+            content: '';
+
+            position: absolute;
+            top: 0;
+            left: 0;
+
+            width: 100%;
+            height: 100%;
+
+            background: linear-gradient(180deg, rgba(0, 0, 0, 0) 62.73%, rgba(0, 0, 0, 0.4) 81.91%);
+        }
+    }
+
+    &__bg {
+        height: 100%;
+
+        object-fit: cover;
+    }
+}

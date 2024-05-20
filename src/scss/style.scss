@@ -83,6 +83,10 @@ main {
 }
 
 .no-margin {
+    &_md {
+        margin: 0;
+    }
+
     @media (min-width: 48em) {
         margin: 0;
     }

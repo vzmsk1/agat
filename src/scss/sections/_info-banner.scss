@@ -1,0 +1,46 @@
+.info-banner {
+    background: linear-gradient(
+        236.5deg,
+        #c10b73 -4.18%,
+        #b6136d 13.92%,
+        #f55bb2 30.54%,
+        #b6136d 49.38%,
+        #f55bb2 66.56%,
+        #b6136d 83.74%,
+        #c10b73 106.46%
+    );
+
+    &__container {
+        padding: 15rem 0;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        row-gap: 3.2rem;
+
+        text-align: center;
+        color: $white;
+
+        @media (max-width: 48em) {
+            &.container {
+                padding: 16rem 4rem;
+
+                align-items: flex-start;
+                row-gap: 4.8rem;
+
+                text-align: left;
+            }
+        }
+    }
+
+    &__text-wrap {
+        display: flex;
+        flex-direction: column;
+        row-gap: 4rem;
+
+        @media (min-width: 48em) {
+            row-gap: 2rem;
+            max-width: 108.3rem;
+        }
+    }
+}

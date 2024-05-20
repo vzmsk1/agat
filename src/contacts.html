@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <script src="https://api-maps.yandex.ru/v3/?apikey=402f83d9-3e90-4726-b547-87890093893a&lang=ru_RU"></script>
+        <title>Контакты</title>
+        <noscript>
+            <style>
+                /**
+                * Reinstate scrolling for non-JS clients
+                */
+                .simplebar-content-wrapper {
+                    scrollbar-width: auto;
+                    -ms-overflow-style: auto;
+                }
+
+                .simplebar-content-wrapper::-webkit-scrollbar,
+                .simplebar-hide-scrollbar::-webkit-scrollbar {
+                    display: initial;
+                    width: initial;
+                    height: initial;
+                }
+            </style>
+        </noscript>
+    </head>
+    <body>
+        <div class="wrapper">
+            <include src="./components/header.html"></include>
+            <main>
+                <section class="hero">
+                    <div class="hero__container container">
+                        <span class="hero__title h h_h1">Контакты</span>
+                        <button type="button" class="hero__btn btn btn_pink">
+                            <span class="btn__txt">связаться с нами</span>
+                        </button>
+                    </div>
+                    <nav class="hero__nav">
+                        <a href="#" class="hero__nav-link txt30 txt30_md"><span>О холдинге</span></a>
+                        <a href="#" class="hero__nav-link txt30 txt30_md"
+                            ><span>Направления деятельности</span></a
+                        >
+                        <a href="#" class="hero__nav-link txt30 txt30_md"><span>Продукция</span></a>
+                        <a href="#" class="hero__nav-link txt30 txt30_md"><span>Пресс-центр</span></a>
+                        <a href="#" class="hero__nav-link txt30 txt30_md"><span>Экспорт</span></a>
+                        <a href="#" class="hero__nav-link txt30 txt30_md _is-active"><span>Контакты</span></a>
+                    </nav>
+                    <div class="hero__bg-wrap">
+                        <img
+                            src="./assets/images/bg/cb8d3bc125a4ad91b1ecfcc337a230ad.webp"
+                            alt=""
+                            class="hero__bg"
+                        />
+                    </div>
+                </section>
+                <include src="./components/_contacts.html"></include>
+                <include src="./components/_request-form.html"></include>
+            </main>
+            <include src="./components/footer.html"></include>
+            <include src="./components/modals.html"></include>
+            <include src="./components/svg.html"></include>
+        </div>
+    </body>
+</html>

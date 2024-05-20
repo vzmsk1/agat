@@ -1,21 +1,46 @@
 import { modules } from '../modules';
+import { removeClasses } from '../utils/utils';
 
-export const markersCollection = [
+const contactsMapCollection = [
     {
         coordinate: [44.01363099999999, 44.56721607461302],
-        idx: 0
+        id: 'main-office'
     }
 ];
 
-async function initMap() {
+const contactsListMapCollection = [
+    {
+        coordinate: [44.01363099999999, 44.56721607461302],
+        id: 'main-office'
+    },
+    {
+        coordinate: [44.16205050000001, 44.78223157458179],
+        id: 'mart-office'
+    }
+];
+
+async function initMap(id) {
     await ymaps3.ready;
     const { YMap, YMapDefaultSchemeLayer, YMapDefaultFeaturesLayer, YMapMarker, YMapCenterLocation } = ymaps3;
-    const map = new YMap(document.getElementById('contacts-map'), {
+
+    const mapEl = document.getElementById(id);
+
+    const isContactsListMap = id === 'contacts-list-map';
+
+    const contactsListMapCenter =
+        window.innerWidth <= 768
+            ? [44.073381446307614, 44.624760323327415]
+            : [44.15165903419824, 44.624760323327415];
+    const contactsMapCenter =
+        window.innerWidth <= 768
+            ? [43.98969076310273, 44.5033927883371]
+            : [43.71974672265624, 44.381373579680876];
+
+    const markersCollection = isContactsListMap ? contactsListMapCollection : contactsMapCollection;
+
+    const map = new YMap(mapEl, {
         location: {
-            center:
-                window.innerWidth <= 768
-                    ? [43.98969076310273, 44.5033927883371]
-                    : [43.71974672265624, 44.381373579680876],
+            center: isContactsListMap ? contactsListMapCenter : contactsMapCenter,
             zoom: 10
         },
         behaviors: ['drag']
@@ -26,9 +51,8 @@ async function initMap() {
     map.addChild(new YMapDefaultSchemeLayer());
     map.addChild(new YMapDefaultFeaturesLayer({ zIndex: 1800 }));
 
-    markersCollection.forEach((el) => {
+    markersCollection.forEach((el, idx) => {
         let content = document.createElement('div');
-        content.dataset.index = el.idx;
         content.classList.add('marker', el.type);
         content.insertAdjacentHTML(
             'beforeend',
@@ -45,11 +69,32 @@ async function initMap() {
                     </svg>
                   `
         );
+        content.dataset.office = el.id;
+
+        if (idx === 0) {
+            content.classList.add('_is-active');
+            document.querySelector(`[data-office-name="${el.id}"]`) &&
+                document.querySelector(`[data-office-name="${el.id}"]`).classList.add('_is-active');
+        }
+
         const marker = new YMapMarker({ coordinates: el.coordinate, draggable: false }, content);
         map.addChild(marker);
     });
+
+    if (isContactsListMap) {
+        mapEl.addEventListener('click', function (e) {
+            if (e.target.closest('.marker')) {
+                const mark = e.target.closest('.marker');
+                const office = document.querySelector(`[data-office-name="${mark.dataset.office}"]`);
+
+                removeClasses(mapEl.querySelectorAll('.marker'), '_is-active');
+                removeClasses(document.querySelectorAll('.contacts__list-item'), '_is-active');
+                mark.classList.add('_is-active');
+                office && office.classList.add('_is-active');
+            }
+        });
+    }
 }
 
-if (document.getElementById('contacts-map')) {
-    initMap();
-}
+document.getElementById('contacts-map') && initMap('contacts-map');
+document.getElementById('contacts-list-map') && initMap('contacts-list-map');

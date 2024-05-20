@@ -1,0 +1,50 @@
+<section class="request-form">
+    <div class="request-form__container container">
+        <div class="request-form__head">
+            <span class="request-form__title h h_h2">Приглашаем  к сотрудничеству</span>
+            <p class="request-form__text txt30 txt30_md">
+                Будем рады сотрудничеству с производителями сельскохозяйственной продукции  на взаимовыгодных
+                условиях
+            </p>
+        </div>
+        <form action="#" data-dev class="request-form__form form-request-form">
+            <div class="form-request-form__fields">
+                <div data-hint="Поле заполнено неверно" class="request-form__input input">
+                    <input
+                        data-validate
+                        data-required
+                        autocomplete="off"
+                        type="text"
+                        name="form[]"
+                        placeholder="Имя"
+                        class="input__field"
+                    />
+                </div>
+                <div data-hint="Поле заполнено неверно" class="request-form__input input">
+                    <input
+                        data-tel-mask
+                        data-validate
+                        data-required
+                        autocomplete="off"
+                        type="tel"
+                        name="form[]"
+                        placeholder="Телефон"
+                        class="input__field"
+                    />
+                </div>
+                <div data-hint="Поле заполнено неверно" class="request-form__input input input_textarea">
+                    <textarea name="form[]" placeholder="Комментарий" class="input__field"></textarea>
+                </div>
+            </div>
+            <div class="form-request-form__footer">
+                <p class="form-request-form__text">
+                    Нажимая на кнопку, вы соглашаетесь на обработку персональных данных и политику
+                    конфиденциальности
+                </p>
+                <button type="submit" class="form-request-form__btn btn btn_white">
+                    <span class="btn__txt">Отправить заявку</span>
+                </button>
+            </div>
+        </form>
+    </div>
+</section>

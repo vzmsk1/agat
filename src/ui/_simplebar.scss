@@ -1,0 +1,27 @@
+[data-simplebar] {
+    .simplebar-horizontal {
+        display: none;
+    }
+
+    .simplebar-track.simplebar-vertical {
+        width: 0.6rem;
+
+        @media (max-width: 48em) {
+            width: 0.8rem;
+        }
+    }
+
+    .simplebar-scrollbar.simplebar-visible {
+        min-height: 10.4rem;
+
+        background-color: $pink;
+
+        &:before {
+            border-radius: 0;
+
+            opacity: 1;
+
+            background: $pink;
+        }
+    }
+}
