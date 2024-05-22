@@ -171,6 +171,22 @@ function initSliders() {
         });
     }
 
+    if (document.querySelector('.sales__swiper') && window.innerWidth <= 768) {
+        new Swiper('.sales__swiper', {
+            modules: [Pagination],
+            speed: 800,
+            loop: true,
+            autoHeight: true,
+            slidesPerView: 1,
+            spaceBetween: remToPx(4),
+            pagination: {
+                el: '.sales__pagination',
+                type: 'bullets',
+                clickable: true
+            }
+        });
+    }
+
     if (document.querySelector('.laboratory__swiper')) {
         new Swiper('.laboratory__swiper', {
             modules: [Pagination],

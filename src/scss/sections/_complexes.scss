@@ -117,6 +117,30 @@
 }
 
 .info-complexes {
+    &_flour {
+        .info-complexes {
+            &__subtitle {
+                @media (max-width: 48em) {
+                    row-gap: normal;
+                }
+                @media (min-width: 48em) {
+                    max-width: 114rem;
+                }
+            }
+            &__icon {
+                svg {
+                    width: 13.7rem;
+                    height: 16rem;
+
+                    @media (max-width: 48em) {
+                        width: 17.2rem;
+                        height: 17.2rem;
+                    }
+                }
+            }
+        }
+    }
+
     &_mills {
         .info-complexes {
             &__subtitle {
