@@ -9,7 +9,7 @@
         </div>
         <form action="#" data-dev class="request-form__form form-request-form">
             <div class="form-request-form__fields">
-                <div data-hint="Поле заполнено неверно" class="request-form__input input">
+                <div data-hint="Поле заполнено неверно" class="request-form__input input input_white">
                     <input
                         data-validate
                         data-required
@@ -20,7 +20,13 @@
                         class="input__field"
                     />
                 </div>
-                <div data-hint="Поле заполнено неверно" class="request-form__input input">
+                <div
+                    data-hint="Поле заполнено неверно"
+                    class="request-form__input input input_white input_textarea"
+                >
+                    <textarea name="form[]" placeholder="Комментарий" class="input__field"></textarea>
+                </div>
+                <div data-hint="Поле заполнено неверно" class="request-form__input input input_white">
                     <input
                         data-tel-mask
                         data-validate
@@ -31,9 +37,6 @@
                         placeholder="Телефон"
                         class="input__field"
                     />
-                </div>
-                <div data-hint="Поле заполнено неверно" class="request-form__input input input_textarea">
-                    <textarea name="form[]" placeholder="Комментарий" class="input__field"></textarea>
                 </div>
             </div>
             <div class="form-request-form__footer">

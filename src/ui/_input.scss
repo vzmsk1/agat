@@ -11,13 +11,11 @@ input:focus {
     outline: none;
 }
 
-.input,
-.input__field {
-    border-radius: 0 8rem 0 0;
-
-    @media (max-width: 48em) {
-        border-radius: 0 16rem 0 0;
-    }
+.input.input_white._has-error .input__field::placeholder,
+.input.input_white._has-error::after,
+.input_white .input__field,
+.input_white .input__field::placeholder {
+    color: $white;
 }
 
 .input {
@@ -28,13 +26,23 @@ input:focus {
     display: flex;
     height: 9.7rem;
 
-    background: url('./assets/images/bg-svg/liner-gold-2.svg') center / cover no-repeat;
+    background: url('./assets/images/bg-svg/input-shape.svg') center / 100% 100% no-repeat;
     overflow: hidden;
 
     transition: border-bottom 0.5s ease;
 
+    &_textarea {
+        textarea {
+            resize: none;
+        }
+
+        @media (min-width: 48em) {
+            background: url('./assets/images/bg-svg/textarea-shape.svg') center / 100% 100% no-repeat;
+        }
+    }
+
     &_pink {
-        background: url('./assets/images/bg-svg/liner-pink.svg') center / cover no-repeat;
+        background: url('./assets/images/bg-svg/input-shape-pink.svg') center / 100% 100% no-repeat;
     }
 
     @media (max-width: 48em) {
@@ -56,8 +64,6 @@ input:focus {
         padding: 3.2rem 4rem;
 
         flex: 1 1 auto;
-
-        background-color: $white;
 
         &::placeholder {
             color: #6f7070;
