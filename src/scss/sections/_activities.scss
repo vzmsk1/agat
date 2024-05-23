@@ -1,6 +1,16 @@
 .activities {
     position: relative;
 
+    &_holding {
+        .activities {
+            &__title {
+                @media (max-width: 48em) {
+                    max-width: none;
+                }
+            }
+        }
+    }
+
     &__bg-wrap {
         position: absolute;
         z-index: -1;
@@ -68,6 +78,25 @@
     &__carousel {
         position: relative;
 
+        &_md {
+            .activities__nav-btn {
+                display: none;
+            }
+            @media (max-width: 48em) {
+                .activities__nav-btn {
+                    display: inline-flex;
+
+                    &.i-btn_arr-next {
+                        transform: translate(20%, -50%);
+                    }
+
+                    &.i-btn_arr-prev {
+                        transform: translate(-20%, -50%);
+                    }
+                }
+            }
+        }
+
         @media (max-width: 48em) {
             display: flex;
             flex-direction: column;
@@ -123,6 +152,24 @@
 
     overflow: hidden;
 
+    &_centered {
+        .slide-activities {
+            &__content {
+                text-align: center;
+            }
+
+            &__inner {
+                display: flex;
+                width: 100%;
+            }
+            &__subtitle {
+                @media (min-width: 48em) {
+                    max-width: 43rem;
+                }
+            }
+        }
+    }
+
     &.swiper-slide {
         display: flex;
         min-height: 34.1rem;
@@ -161,9 +208,11 @@
         }
     }
 
-    @media (any-hover: hover) {
-        &:hover {
-            border: 0.7rem solid $pink;
+    &:not(.activities__carousel_md &) {
+        @media (any-hover: hover) {
+            &:hover {
+                border: 0.7rem solid $pink;
+            }
         }
     }
 

@@ -1,0 +1,68 @@
+.mission {
+    padding: 0 4rem;
+
+    display: grid;
+    gap: 6.4rem;
+    width: 100%;
+
+    @media (min-width: 48em) {
+        padding: 0;
+
+        grid-template-columns: repeat(2, 1fr);
+        gap: 4rem;
+    }
+
+    &__group {
+        display: flex;
+        flex-direction: column;
+        row-gap: 4rem;
+
+        @media (min-width: 48em) {
+            row-gap: 5rem;
+
+            &:last-child {
+                .mission__image-wrap {
+                    border-radius: 10rem 0 0 0;
+                }
+                .mission__content {
+                    align-self: flex-start;
+                }
+            }
+        }
+        @media (max-width: 48em) {
+            &:last-child {
+                flex-direction: column-reverse;
+            }
+        }
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        row-gap: 6.4rem;
+
+        @media (min-width: 48em) {
+            align-self: flex-end;
+            row-gap: 5rem;
+            max-width: 76rem;
+        }
+    }
+
+    &__image-wrap {
+        height: 68.5rem;
+        border-radius: 0 0 10rem 0;
+
+        overflow: hidden;
+
+        @media (max-width: 48em) {
+            height: 48.8rem;
+            border-radius: 8rem 0 0 0;
+        }
+    }
+
+    &__image {
+        height: 100%;
+
+        object-fit: cover;
+    }
+}

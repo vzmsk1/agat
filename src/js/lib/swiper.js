@@ -140,6 +140,24 @@ function initSliders() {
             }
         });
     }
+    if (document.querySelector('.standards__swiper')) {
+        new Swiper('.standards__swiper', {
+            modules: [Navigation],
+            speed: 800,
+            loop: true,
+            slidesPerView: 1,
+            spaceBetween: remToPx(4),
+            navigation: {
+                prevEl: '.standards .i-btn_arr-prev',
+                nextEl: '.standards .i-btn_arr-next'
+            },
+            breakpoints: {
+                768: {
+                    slidesPerView: 3
+                }
+            }
+        });
+    }
     if (document.querySelector('.plants-info__list-wrap') && window.innerWidth <= 768) {
         new Swiper('.plants-info__list-wrap', {
             modules: [Pagination],

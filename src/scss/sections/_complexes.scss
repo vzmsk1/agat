@@ -117,11 +117,23 @@
 }
 
 .info-complexes {
+    &_holding {
+        .info-complexes {
+            &__image {
+                width: 18.1rem;
+            }
+            &__subtitle {
+                max-width: 109.5rem;
+
+                row-gap: 4rem;
+            }
+        }
+    }
     &_wheat {
         .info-complexes {
             &__subtitle {
                 @media (min-width: 48em) {
-                    max-width: 109.5rem;
+                    max-width: 92.5rem;
                 }
             }
             &__icon {

@@ -57,6 +57,14 @@
         transform: translateY(2rem);
     }
 
+    &_white {
+        color: $white;
+
+        &::before {
+            background: $white;
+        }
+    }
+
     @media (max-width: 48em) {
         column-gap: 2.4rem;
 
