@@ -1,0 +1,80 @@
+.bags-banner {
+    margin-bottom: 15rem;
+
+    background: linear-gradient(263.51deg, #b1934e -1.67%, #f2d790 35.23%, #b1934e 98.62%);
+
+    @media (max-width: 48em) {
+        margin-bottom: 16rem;
+    }
+
+    &__container {
+        padding: 15rem 0;
+
+        display: flex;
+        justify-content: space-between;
+
+        @media (max-width: 48em) {
+            &.container {
+                padding: 16rem 4rem;
+            }
+        }
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__title {
+        margin-bottom: 4.8rem;
+
+        @media (min-width: 48em) {
+            margin-bottom: 3.2rem;
+
+            max-width: 124.2rem;
+        }
+        @media (max-width: 48em) {
+            font-size: 4.8rem;
+        }
+    }
+
+    &__text-wrap {
+        display: flex;
+        flex-direction: column;
+        row-gap: 4rem;
+
+        .highlight {
+            white-space: nowrap;
+
+            @media (max-width: 48em) {
+                margin: 0;
+                padding: 0.5rem 1rem;
+
+                line-height: 172%;
+                font-size: 3.5rem;
+            }
+        }
+
+        @media (min-width: 48em) {
+            row-gap: 2rem;
+            max-width: 100.7rem;
+        }
+    }
+
+    &__icon {
+        margin-left: -4rem;
+
+        align-self: flex-end;
+
+        transform: translateX(-11rem);
+
+        svg {
+            width: 44.8rem;
+            height: 44.8rem;
+        }
+
+        @media (max-width: 48em) {
+            display: none;
+        }
+    }
+}

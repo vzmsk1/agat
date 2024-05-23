@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Мука в мешках</title>
+    </head>
+    <body>
+        <div class="wrapper">
+            <include src="./components/header.html"></include>
+            <main>
+                <section class="hero">
+                    <div class="hero__container container">
+                        <span class="hero__title hero__title h h_h2">Мука</span>
+                        <button type="button" class="hero__btn btn btn_pink">
+                            <span class="btn__txt">связаться с нами</span>
+                        </button>
+                    </div>
+                    <nav class="hero__nav">
+                        <a href="#" class="hero__nav-link txt30 txt30_md"><span>О холдинге</span></a>
+                        <a href="#" class="hero__nav-link txt30 txt30_md"
+                            ><span>Направления деятельности</span></a
+                        >
+                        <a href="#" class="hero__nav-link txt30 txt30_md _is-active"
+                            ><span>Продукция</span></a
+                        >
+                        <a href="#" class="hero__nav-link txt30 txt30_md"><span>Пресс-центр</span></a>
+                        <a href="#" class="hero__nav-link txt30 txt30_md"><span>Экспорт</span></a>
+                        <a href="#" class="hero__nav-link txt30 txt30_md"><span>Контакты</span></a>
+                    </nav>
+                    <div class="hero__bg-wrap">
+                        <img src="./assets/images/bg/AdobeStock_241420077.webp" alt="" class="hero__bg" />
+                    </div>
+                </section>
+                <section class="info-complexes info-complexes_flour">
+                    <div class="info-complexes__container container">
+                        <div class="info-complexes__icon">
+                            <svg>
+                                <use href="#flour-bag-svg"></use>
+                            </svg>
+                        </div>
+                        <span class="info-complexes__subtitle h h_h4"
+                            ><span>Мука традиционно была символом богатства, здоровья и плодородия. </span>
+                            <span>Все наши традиционные праздники невозможно представить без выпечки.</span>
+                            <span
+                                >Поэтому мы уделяем особое внимание качеству нашей муки, делая ставку на
+                                зерно, выращенного в лучших климатических условиях и подходящем регионе, а
+                                также на высокотехнологичное мельничное оборудование.</span
+                            >
+                        </span>
+                    </div>
+                </section>
+                <include src="./components/_production-main-bags.html"></include>
+                <section class="request">
+                    <div class="request__container container">
+                        <div class="request__image-wrap">
+                            <img
+                                src="./assets/images/bg/21f26a0996c8a4238bf828fcf7621059.webp"
+                                alt=""
+                                class="request__image"
+                            />
+                        </div>
+                        <div class="request__content">
+                            <span class="request__title h h_h1">Оставить заявку</span>
+                            <p class="request__text txt20">
+                                Будем раду сотрудничеству с производителями сельскохозяйственной продукции
+                                 на взаимовыгодных условиях
+                            </p>
+                            <form action="#" data-dev class="request__form form-request">
+                                <div class="form-request__fields">
+                                    <div data-hint="Поле заполнено неверно" class="form-request__input input">
+                                        <input
+                                            data-validate
+                                            data-required
+                                            autocomplete="off"
+                                            type="text"
+                                            name="form[]"
+                                            placeholder="Имя"
+                                            class="input__field"
+                                        />
+                                    </div>
+                                    <div data-hint="Поле заполнено неверно" class="form-request__input input">
+                                        <input
+                                            data-tel-mask
+                                            data-validate
+                                            data-required
+                                            autocomplete="off"
+                                            type="tel"
+                                            name="form[]"
+                                            placeholder="Телефон"
+                                            class="input__field"
+                                        />
+                                    </div>
+                                </div>
+                                <p class="form-request__text">
+                                    Нажимая на кнопку, вы соглашаетесь на обработку персональных данных
+                                    и политику конфиденциальности
+                                </p>
+                                <button type="submit" class="form-request__btn btn btn_pink">
+                                    <span class="btn__txt">Отправить заявку</span>
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </section>
+                <include src="./components/_sales.html"></include>
+            </main>
+            <include src="./components/footer.html"></include>
+            <include src="./components/modals.html"></include>
+            <include src="./components/svg.html"></include>
+        </div>
+    </body>
+</html>

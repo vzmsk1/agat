@@ -117,6 +117,22 @@
 }
 
 .info-complexes {
+    &_wheat {
+        .info-complexes {
+            &__subtitle {
+                @media (min-width: 48em) {
+                    max-width: 109.5rem;
+                }
+            }
+            &__icon {
+                svg {
+                    width: 11.1rem;
+                    height: 16.1rem;
+                }
+            }
+        }
+    }
+
     &_flour {
         .info-complexes {
             &__subtitle {
