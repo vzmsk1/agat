@@ -172,7 +172,6 @@ function initSliders() {
             }
         });
     }
-
     if (document.querySelector('.advantages__swiper') && window.innerWidth <= 768) {
         new Swiper('.advantages__swiper', {
             modules: [Pagination],
@@ -188,7 +187,6 @@ function initSliders() {
             }
         });
     }
-
     if (document.querySelector('.sales__swiper') && window.innerWidth <= 768) {
         new Swiper('.sales__swiper', {
             modules: [Pagination],
@@ -204,7 +202,6 @@ function initSliders() {
             }
         });
     }
-
     if (document.querySelector('.laboratory__swiper')) {
         new Swiper('.laboratory__swiper', {
             modules: [Pagination],
@@ -233,3 +230,5 @@ function initSliders() {
 document.addEventListener('DOMContentLoaded', function () {
     initSliders();
 });
+
+window.addEventListener('resize', initSliders);

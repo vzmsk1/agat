@@ -1,0 +1,209 @@
+.activities-menu {
+    position: fixed;
+    z-index: 50;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    overflow: auto;
+
+    background-color: $white;
+
+    opacity: 0;
+    visibility: hidden;
+
+    transition:
+        opacity 0.5s ease,
+        visibility 0.5s ease;
+
+    ._show-activities-menu & {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    &__container {
+        padding: 14.4rem 4rem 11.3rem 4rem;
+
+        display: flex;
+        flex-direction: column;
+
+        @media (max-width: 48em) {
+            &.container {
+                padding: 4.6rem 4rem 6.4rem 4rem;
+            }
+        }
+    }
+
+    &__head {
+        @media (max-width: 48em) {
+            margin-bottom: 6.4rem;
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+    }
+
+    &__close-btn {
+        display: inline-flex;
+
+        svg {
+            width: 3.2rem;
+            height: 3.2rem;
+        }
+
+        @media (min-width: 48em) {
+            position: absolute;
+            top: 4rem;
+            right: 4rem;
+
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            width: 9rem;
+            height: 9rem;
+
+            background: linear-gradient(298.18deg, #ebc76b 0%, #fee6aa 48.27%, #ecc96f 100%);
+
+            svg {
+                width: 2.4rem;
+                height: 2.4rem;
+            }
+        }
+    }
+
+    &__logo-wrap {
+        width: 20.8rem;
+
+        @media (min-width: 48em) {
+            display: none;
+        }
+    }
+
+    &__body {
+        display: flex;
+        flex-direction: column;
+        row-gap: 4rem;
+    }
+
+    &__card {
+        &:not(&_video) {
+            @media (any-hover: hover) {
+                &:hover {
+                    .card-activities-menu {
+                        &__bg {
+                            transform: scale(1.03);
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    &__group {
+        display: grid;
+        gap: 4rem;
+        width: 100%;
+
+        @media (min-width: 48em) {
+            grid-template-columns: repeat(3, 4fr);
+
+            &_fw {
+                grid-template-columns: repeat(2, 1fr);
+
+                .card-activities-menu {
+                    border-radius: 10rem 0 0 0;
+
+                    &:last-child {
+                        border-radius: 0 0 10rem 0;
+                    }
+                }
+            }
+        }
+        @media (max-width: 48em) {
+            &_fw {
+                .card-activities-menu {
+                    &:first-child {
+                        border-radius: 8.8rem 0 0 0;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.card-activities-menu {
+    position: relative;
+
+    border-radius: 0 0 10rem 0;
+
+    overflow: hidden;
+
+    @media (max-width: 48em) {
+        border-radius: 0 0 8.8rem 0;
+    }
+
+    &__inner {
+        display: flex;
+
+        &:not(.activities-menu__card_video &) {
+            padding: 4rem;
+
+            align-items: flex-end;
+        }
+    }
+
+    &__video video,
+    &__inner {
+        height: 40.6rem;
+
+        @media (max-width: 48em) {
+            height: 35.6rem;
+        }
+    }
+
+    &__title {
+        color: $white;
+
+        @media (max-width: 48em) {
+            font-weight: 700;
+            font-size: 4rem;
+            line-height: 110%;
+        }
+    }
+
+    &__bg-wrap {
+        position: absolute;
+        z-index: -1;
+        top: 0;
+        left: 0;
+
+        width: 100%;
+        height: 100%;
+
+        overflow: hidden;
+
+        &::after {
+            content: '';
+
+            position: absolute;
+            top: 0;
+            left: 0;
+
+            width: 100%;
+            height: 100%;
+
+            background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.3) 86.75%);
+        }
+    }
+
+    &__bg {
+        height: 100%;
+
+        object-fit: cover;
+
+        transition: transform 0.5s ease;
+    }
+}

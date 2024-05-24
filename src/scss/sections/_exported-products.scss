@@ -43,7 +43,7 @@
     }
 
     &__btn {
-        margin-bottom: auto;
+        margin-bottom: 19.4rem;
 
         @media (max-width: 48em) {
             margin-bottom: 8rem;
@@ -72,6 +72,8 @@
         &.i-btn_arr-prev {
             left: 0;
 
+            transform: translate(-50%, -50%);
+
             @media (max-width: 48em) {
                 transform: translate(-20%, -50%);
             }
@@ -95,7 +97,7 @@
         left: 0;
 
         width: 100%;
-        height: 90%;
+        height: 85%;
 
         &::after {
             content: '';

@@ -66,6 +66,7 @@
                 left: -4rem;
 
                 width: 112%;
+                height: 55%;
             }
         }
     }
@@ -117,6 +118,22 @@
 }
 
 .info-complexes {
+    &_silo-tower {
+        .info-complexes {
+            &__icon {
+                svg {
+                    width: 8.8rem;
+                    height: 15.9rem;
+
+                    @media (max-width: 48em) {
+                        width: 14.6rem;
+                        height: 19.8rem;
+                    }
+                }
+            }
+        }
+    }
+
     &_holding {
         .info-complexes {
             &__image {
@@ -178,6 +195,15 @@
     }
 
     &__icon {
+        svg {
+            width: 13.7rem;
+
+            @media (max-width: 48em) {
+                width: 17rem;
+                height: 17rem;
+            }
+        }
+
         &_cow {
             svg {
                 width: 21.5rem;
@@ -200,14 +226,6 @@
                 }
             }
         }
-
-        svg {
-            width: 13.7rem;
-
-            @media (max-width: 48em) {
-                width: 22.4rem;
-            }
-        }
     }
 
     &__subtitle {
@@ -224,7 +242,9 @@
             row-gap: 4rem;
 
             .highlight {
-                line-height: 170%;
+                margin: 0;
+
+                line-height: 183%;
             }
         }
     }

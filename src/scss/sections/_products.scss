@@ -13,7 +13,16 @@
         width: 100%;
         height: 100%;
 
-        background: url('./assets/images/bg-svg/liner-pink.svg') center / cover no-repeat;
+        background: linear-gradient(
+            229.6deg,
+            #c10b73 2.72%,
+            #b6136d 19.39%,
+            #f55bb2 34.72%,
+            #b6136d 52.08%,
+            #f55bb2 67.92%,
+            #b6136d 83.75%,
+            #c10b73 104.69%
+        );
     }
 
     &__bg-wrap {

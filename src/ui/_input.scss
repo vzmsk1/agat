@@ -32,12 +32,14 @@ input:focus {
     transition: border-bottom 0.5s ease;
 
     &_textarea {
+        background: url('./assets/images/bg-svg/textarea-shape.svg') center / 100% 100% no-repeat;
+
         textarea {
             resize: none;
         }
 
-        @media (min-width: 48em) {
-            background: url('./assets/images/bg-svg/textarea-shape.svg') center / 100% 100% no-repeat;
+        @media (max-width: 48em) {
+            background: url('./assets/images/bg-svg/textarea-shape-mobile.svg') center / 100% 100% no-repeat;
         }
     }
 

@@ -109,7 +109,7 @@
 
             &:not(.managers_main &) {
                 &:first-child {
-                    margin-bottom: -9rem;
+                    padding-top: 15rem;
 
                     .managers {
                         &__content {
@@ -129,6 +129,10 @@
 
             &_reversed {
                 flex-direction: row-reverse;
+
+                @media (min-width: 48em) {
+                    transform: translateY(-7rem);
+                }
 
                 .managers {
                     &__content {

@@ -9,8 +9,8 @@ body::after {
     width: 100%;
     height: 100%;
 
-    background: rgba(0, 27, 48, 0.4);
-    backdrop-filter: blur(0.5rem);
+    background-color: rgba(37, 37, 37, 0.3);
+    backdrop-filter: blur(1.6rem);
 
     opacity: 0;
     pointer-events: none;
@@ -51,6 +51,10 @@ body::after {
         }
     }
 
+    @media (max-width: 48em) {
+        padding: 6.6rem 3rem 11.4rem 3rem;
+    }
+
     // .modal__wrapper
 
     &__wrapper {
@@ -71,8 +75,6 @@ body::after {
 
         width: 100%;
 
-        background-color: $white;
-
         visibility: hidden;
 
         transform: scale(0);
@@ -84,7 +86,59 @@ body::after {
         }
 
         @media (min-width: 48em) {
-            max-width: 76.7rem;
+            max-width: 156rem;
+        }
+    }
+
+    &__body {
+        position: relative;
+
+        border-radius: 0 10rem;
+
+        color: $white;
+
+        background: linear-gradient(
+            236.5deg,
+            #c10b73 -4.18%,
+            #b6136d 13.92%,
+            #f55bb2 30.54%,
+            #b6136d 49.38%,
+            #f55bb2 66.56%,
+            #b6136d 83.74%,
+            #c10b73 106.46%
+        );
+
+        @media (max-width: 48em) {
+            border-radius: 0 8.8rem 0 8.8rem;
+        }
+    }
+
+    &__close {
+        position: absolute;
+        z-index: 3;
+        top: 4rem;
+        right: 4rem;
+
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        width: 9rem;
+        height: 9rem;
+
+        background: linear-gradient(298.18deg, #ebc76b 0%, #fee6aa 48.27%, #ecc96f 100%);
+
+        svg {
+            width: 2.4rem;
+            height: 2.4rem;
+        }
+
+        @media (max-width: 48em) {
+            top: 3.2rem;
+            right: 3.2rem;
+
+            width: 8.8rem;
+            height: 8.8rem;
         }
     }
 
@@ -92,10 +146,148 @@ body::after {
         position: relative;
         z-index: 2;
 
-        padding: 3.2rem;
+        padding: 10rem;
+
+        display: flex;
+        flex-direction: column;
+
+        .modal_text-info & {
+            padding: 22.3rem 10rem;
+        }
+
+        @media (max-width: 48em) {
+            padding: 8rem 4rem 10rem 4rem;
+
+            .modal_text-info & {
+                padding: 12rem 2.8rem;
+            }
+        }
+    }
+
+    &__title {
+        @media (max-width: 48em) {
+            font-weight: 600;
+            font-size: 4.8rem;
+            line-height: 110%;
+        }
+    }
+
+    &__subtitle {
+        font-weight: 500;
+        font-size: 4rem;
+        line-height: 110%;
+    }
+
+    &__head {
+        margin-bottom: 6.4rem;
 
         display: grid;
-        column-gap: 3.2rem;
+        gap: 4rem;
         width: 100%;
+
+        @media (min-width: 48em) {
+            margin-bottom: 6.8rem;
+
+            grid-template-columns: repeat(2, 1fr);
+            align-items: center;
+        }
+    }
+}
+
+.form-modal {
+    display: flex;
+    flex-direction: column;
+
+    &__fields {
+        margin-bottom: 6.4rem;
+
+        display: grid;
+        column-gap: 4rem;
+        row-gap: 3.2rem;
+        width: 100%;
+
+        @media (min-width: 48em) {
+            margin-bottom: 5rem;
+
+            grid-template-columns: repeat(2, 1fr);
+            align-items: center;
+
+            .input_textarea {
+                grid-row: span 2;
+                height: 100%;
+            }
+        }
+        @media (max-width: 48em) {
+            .input_textarea {
+                grid-row: 3/4;
+                height: 40.2rem;
+            }
+        }
+    }
+
+    &__footer {
+        display: flex;
+        flex-direction: column;
+
+        @media (min-width: 48em) {
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+        }
+    }
+
+    &__text {
+        margin-bottom: 6.4rem;
+
+        font-weight: 500;
+        font-size: 3.2rem;
+        line-height: 110%;
+
+        @media (min-width: 48em) {
+            margin-bottom: 0;
+
+            max-width: 56.7rem;
+
+            font-size: 1.8rem;
+            line-height: 2.2rem;
+        }
+    }
+}
+
+.text-info-modal {
+    display: flex;
+    flex-direction: column;
+
+    @media (min-width: 48em) {
+        align-items: center;
+        row-gap: 3.2rem;
+
+        text-align: center;
+    }
+
+    &__title {
+        @media (max-width: 48em) {
+            margin-bottom: 4rem;
+
+            max-width: 53rem;
+
+            font-weight: 600;
+            font-size: 4.8rem;
+            line-height: 110%;
+        }
+    }
+
+    &__text {
+        @media (max-width: 48em) {
+            margin-bottom: 6.4rem;
+
+            font-weight: 500;
+            font-size: 3.5rem;
+            line-height: 110%;
+        }
+    }
+
+    &__text {
+        max-width: 48.8rem;
     }
 }

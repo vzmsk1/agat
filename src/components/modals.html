@@ -1,0 +1,98 @@
+<!-- оставить заявку -->
+<div id="requestModal" aria-hidden="true" class="modal">
+    <div class="modal__wrapper">
+        <div class="modal__content">
+            <div class="modal__body">
+                <button data-close type="button" class="modal__close">
+                    <svg>
+                        <use href="#cross-black-svg"></use>
+                    </svg>
+                </button>
+                <div class="modal__inner">
+                    <div class="modal__head">
+                        <span class="modal__title h h_h2">Оставьте заявку</span>
+                        <span class="modal__subtitle txt30 txt30_md">Ответим на все ваши вопросы!</span>
+                    </div>
+                    <form action="#" data-dev class="modal__form form-modal">
+                        <div class="form-modal__fields">
+                            <div
+                                data-hint="Поле заполнено неверно"
+                                class="form-modal__input input input_white"
+                            >
+                                <input
+                                    data-validate
+                                    data-required
+                                    autocomplete="off"
+                                    type="text"
+                                    name="form[]"
+                                    placeholder="Имя"
+                                    class="input__field"
+                                />
+                            </div>
+                            <div
+                                data-hint="Поле заполнено неверно"
+                                class="form-modal__input input input_white input_textarea"
+                            >
+                                <textarea
+                                    name="form[]"
+                                    placeholder="Комментарий"
+                                    class="input__field"
+                                ></textarea>
+                            </div>
+                            <div
+                                data-hint="Поле заполнено неверно"
+                                class="form-modal__input input input_white"
+                            >
+                                <input
+                                    data-tel-mask
+                                    data-validate
+                                    data-required
+                                    autocomplete="off"
+                                    type="tel"
+                                    name="form[]"
+                                    placeholder="Телефон"
+                                    class="input__field"
+                                />
+                            </div>
+                        </div>
+                        <div class="form-modal__footer">
+                            <p class="form-modal__text">
+                                Нажимая на кнопку, вы соглашаетесь на обработку персональных данных и политику
+                                конфиденциальности
+                            </p>
+                            <button type="submit" class="form-modal__btn btn btn_gold">
+                                <span class="btn__txt">Отправить заявку</span>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- заявка отправлена -->
+<div id="requestSentModal" aria-hidden="true" class="modal modal_text-info">
+    <div class="modal__wrapper">
+        <div class="modal__content">
+            <div class="modal__body">
+                <button data-close type="button" class="modal__close">
+                    <svg>
+                        <use href="#cross-black-svg"></use>
+                    </svg>
+                </button>
+                <div class="modal__inner">
+                    <div class="modal__text-info text-info-modal">
+                        <span class="text-info-modal__title h h_h2">Спасибо, что оставили заявку</span>
+                        <p class="text-info-modal__text txt30 txt30_md">
+                            Наш менеджер свяжется с вами в ближайшее время.
+                        </p>
+                        <a href="#" class="text-info-modal__btn btn btn_gold">
+                            <span class="btn__txt">На главную</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

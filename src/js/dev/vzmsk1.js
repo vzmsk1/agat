@@ -1,6 +1,6 @@
 import gsap from 'gsap';
 import { Draggable } from 'gsap/Draggable';
-import { removeClasses } from '../utils/utils';
+import { bodyLock, bodyUnlock, removeClasses } from '../utils/utils';
 
 gsap.registerPlugin(Draggable);
 
@@ -53,5 +53,33 @@ document.addEventListener('DOMContentLoaded', function () {
                 gsap.to(slide, { opacity: 1, zIndex: 1, duration: 0.4 });
             });
         });
+    }
+
+    if (document.querySelectorAll('.activities-btn').length) {
+        document.querySelectorAll('.activities-btn').forEach((el) => {
+            el.addEventListener('click', function () {
+                document.documentElement.classList.add('_show-activities-menu');
+
+                if (document.documentElement.classList.contains('lock')) {
+                    document.documentElement.classList.add('_show-activities-menu_lock');
+                } else {
+                    bodyLock();
+                }
+            });
+        });
+        const closeBtn = document.querySelector('.activities-menu__close-btn');
+
+        closeBtn &&
+            closeBtn.addEventListener('click', function () {
+                document.documentElement.classList.remove('_show-activities-menu');
+
+                if (!document.documentElement.classList.contains('_show-activities-menu_lock')) {
+                    bodyUnlock();
+                } else {
+                    setTimeout(() => {
+                        document.documentElement.classList.remove('_show-activities-menu_lock');
+                    }, 0);
+                }
+            });
     }
 });

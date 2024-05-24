@@ -1,5 +1,11 @@
 .supplies-geography {
+    padding-bottom: 18rem;
+
     background-color: $white;
+
+    @media (min-width: 48em) {
+        padding-bottom: 15rem;
+    }
 
     &__container {
         margin-bottom: 5rem;

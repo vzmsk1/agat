@@ -114,6 +114,8 @@
     }
 
     &__subtitle {
+        max-width: 47rem;
+
         @media (max-width: 48em) {
             max-width: 40rem;
             height: auto;

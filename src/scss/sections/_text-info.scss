@@ -22,5 +22,12 @@
         @media (min-width: 48em) {
             max-width: 89rem;
         }
+        @media (max-width: 48em) {
+            .highlight {
+                padding: 0.3rem 3rem;
+
+                line-height: 160%;
+            }
+        }
     }
 }

@@ -82,6 +82,12 @@
     &__fields {
         @media (max-width: 48em) {
             row-gap: 6.4rem;
+
+            .input_textarea {
+                grid-row: 3/4;
+
+                height: 40.2rem;
+            }
         }
     }
 

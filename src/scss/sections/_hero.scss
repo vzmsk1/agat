@@ -142,6 +142,18 @@
 
         overflow: hidden;
 
+        @media (any-hover: hover) {
+            &:hover {
+                &::after {
+                    opacity: 1;
+                }
+
+                span {
+                    color: $black;
+                }
+            }
+        }
+
         &::after {
             content: '';
 
@@ -155,6 +167,8 @@
             background: linear-gradient(298.18deg, #ebc76b 0%, #fee6aa 48.27%, #ecc96f 100%);
 
             opacity: 0;
+
+            transition: opacity 0.3s ease;
         }
 
         span {
@@ -162,6 +176,8 @@
             z-index: 2;
 
             max-width: 23.5rem;
+
+            transition: color 0.3s ease;
         }
 
         &._is-active {

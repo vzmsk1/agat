@@ -19,9 +19,9 @@
                     </div>
                     <nav class="hero__nav">
                         <a href="#" class="hero__nav-link txt30 txt30_md"><span>О холдинге</span></a>
-                        <a href="#" class="hero__nav-link txt30 txt30_md _is-active"
-                            ><span>Направления деятельности</span></a
-                        >
+                        <button type="button" class="hero__nav-link activities-btn txt30 txt30_md _is-active">
+                            <span>Направления деятельности</span>
+                        </button>
                         <a href="#" class="hero__nav-link txt30 txt30_md"><span>Продукция</span></a>
                         <a href="#" class="hero__nav-link txt30 txt30_md"><span>Пресс-центр</span></a>
                         <a href="#" class="hero__nav-link txt30 txt30_md"><span>Экспорт</span></a>
@@ -69,7 +69,25 @@
                 </section>
                 <include src="./components/_banner.html"></include>
                 <include src="./components/_contacts-info.html"></include>
+                <section class="manager manager_reversed">
+                    <div class="manager__container container">
+                        <div class="manager__image-wrap">
+                            <img
+                                src="./assets/images/content/359a1acaf7f67b891853106c668cc45a.webp"
+                                alt=""
+                                class="manager__image"
+                            />
+                        </div>
+                        <div class="manager__content">
+                            <span class="manager__title h h_h3">Люфт Андрей Андреевич</span>
+                            <div class="manager__text-wrap">
+                                <p class="manager__text txt30 txt30_md">Директор ООО «Прогресс»</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
             </main>
+            <include src="./components/_activities-menu.html"></include>
             <include src="./components/footer.html"></include>
             <include src="./components/modals.html"></include>
             <include src="./components/svg.html"></include>
