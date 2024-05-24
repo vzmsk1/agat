@@ -52,7 +52,43 @@ body::after {
     }
 
     @media (max-width: 48em) {
-        padding: 6.6rem 3rem 11.4rem 3rem;
+        &:not(&_scheme) {
+            padding: 6.6rem 3rem 11.4rem 3rem;
+        }
+    }
+
+    &_scheme {
+        padding: 0;
+
+        .modal {
+            &__content {
+                max-width: none;
+
+                @media (max-width: 48em) {
+                    display: flex;
+                    flex-direction: column;
+                    flex: 1 1 auto;
+                }
+            }
+            &__body {
+                border-radius: 0;
+
+                background: $white;
+
+                @media (max-width: 48em) {
+                    display: flex;
+                    flex: 1 1 auto;
+                }
+            }
+            &__inner {
+                padding: 0;
+
+                @media (max-width: 48em) {
+                    display: flex;
+                    min-height: 100%;
+                }
+            }
+        }
     }
 
     // .modal__wrapper
@@ -190,6 +226,18 @@ body::after {
 
             grid-template-columns: repeat(2, 1fr);
             align-items: center;
+        }
+    }
+
+    &__scheme-wrap {
+        @media (max-width: 48em) {
+            min-height: 100%;
+        }
+    }
+
+    &__scheme {
+        @media (max-width: 48em) {
+            height: 100%;
         }
     }
 }

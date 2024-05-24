@@ -1,30 +1,7 @@
 import gsap from 'gsap';
-import { Draggable } from 'gsap/Draggable';
 import { bodyLock, bodyUnlock, removeClasses } from '../utils/utils';
 
-gsap.registerPlugin(Draggable);
-
 document.addEventListener('DOMContentLoaded', function () {
-    if (document.querySelectorAll('[data-pan-zoom]').length) {
-        document.querySelectorAll('[data-pan-zoom]').forEach((item) => {
-            const img = item.querySelector('img');
-
-            item.addEventListener('click', (e) => {
-                img.classList.toggle('zoomIn');
-
-                if (img.classList.contains('zoomIn')) {
-                    gsap.to(img, { scale: 1.9, speed: 300 });
-                } else {
-                    gsap.to(img, { scale: 1, translateX: 0, translateY: 0, speed: 300 });
-                }
-            });
-
-            Draggable.create(img, {
-                bounds: item
-            });
-        });
-    }
-
     if (document.querySelectorAll('.about-holding__tab').length) {
         const tabs = Array.from(document.querySelectorAll('.about-holding__tab'));
         const slides = Array.from(document.querySelectorAll('.about-holding__slide'));
@@ -82,4 +59,34 @@ document.addEventListener('DOMContentLoaded', function () {
                 }
             });
     }
+
+    if (document.querySelectorAll('.plants-info__card').length) {
+        document.querySelectorAll('.plants-info__card').forEach((el) => {
+            el.addEventListener('click', function () {
+                if (window.innerWidth <= 768) {
+                    el.classList.toggle('_is-active');
+                }
+            });
+        });
+    }
 });
+
+if (document.querySelector('.loader')) {
+    const loader = document.querySelector('.loader');
+
+    bodyLock();
+
+    window.addEventListener('load', function () {
+        gsap.to('.loader__logo-wrap', {
+            'clip-path': 'polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)',
+            duration: 2,
+            delay: 0.5,
+            onComplete: () => {
+                setTimeout(() => {
+                    loader.classList.add('_is-hidden');
+                    bodyUnlock();
+                }, 700);
+            }
+        });
+    });
+}
