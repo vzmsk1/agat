@@ -9,7 +9,7 @@
         <div class="wrapper">
             <include src="./components/header.html"></include>
             <main>
-                <section class="hero hero_elevators">
+                <section class="hero hero_has-video hero_elevators">
                     <div class="hero__container container">
                         <span class="hero__title h h_h1">Элеваторы</span>
                         <button type="button" class="hero__btn btn btn_pink">
@@ -26,12 +26,15 @@
                         <a href="#" class="hero__nav-link txt30 txt30_md"><span>Экспорт</span></a>
                         <a href="#" class="hero__nav-link txt30 txt30_md"><span>Контакты</span></a>
                     </nav>
-                    <div class="hero__bg-wrap">
-                        <img
-                            src="./assets/images/bg/a61b97e647b001ee5cca5604aaa955c4.webp"
-                            alt=""
-                            class="hero__bg"
-                        />
+                     <div class="hero__bg-wrap">
+                        <video
+                                        data-videojs
+                                        data-videojs-autoplay
+                                        class=hero__video"
+                                    >
+                                        <source src="./assets/video/sample-video.mp4" type="video/mp4" />
+                                    </video>
+                        <img src="./assets/images/bg/a61b97e647b001ee5cca5604aaa955c4.webp" alt="" class="hero__bg" />
                     </div>
                 </section>
                 <include src="./components/_complexes.html"></include>

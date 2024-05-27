@@ -42,7 +42,7 @@
 </header>
 
             <main>
-                <section class="hero">
+                <section class="hero hero_has-video">
                     <div class="hero__container container">
                         <div class="hero__title-wrap">
                             <span class="hero__title hero__title h h_h2"
@@ -50,9 +50,9 @@
                                 зарубежья</span
                             >
                             <ul class="hero__list">
-                                <li class="hero__list-item txt30 txt30_md">Поставки точно в срок</li>
-                                <li class="hero__list-item txt30 txt30_md">Гарантия качества</li>
-                                <li class="hero__list-item txt30 txt30_md">Доступные цены</li>
+                                <li class="hero__list-item txt40 txt40_md">Поставки точно в срок</li>
+                                <li class="hero__list-item txt40 txt40_md">Гарантия качества</li>
+                                <li class="hero__list-item txt40 txt40_md">Доступные цены</li>
                             </ul>
                         </div>
                         <button type="button" class="hero__btn btn btn_pink">
@@ -70,6 +70,13 @@
                         <a href="#" class="hero__nav-link txt30 txt30_md"><span>Контакты</span></a>
                     </nav>
                     <div class="hero__bg-wrap">
+                        <video
+                        data-videojs
+                        data-videojs-autoplay
+                        class=hero__video"
+                        >
+                            <source src="./assets/video/sample-video.mp4" type="video/mp4" />
+                        </video>
                         <img src="./assets/images/bg/TASS_53668420.webp" alt="" class="hero__bg" />
                     </div>
                 </section>
@@ -79,12 +86,17 @@
             <span class="head-export-info__title h h_h2">ООО <span>«Ставэкспорт»</span></span>
             <div class="head-export-info__text-wrap txt30 txt30_md">
                 <p class="head-export-info__text">
-                    ООО&nbsp;«Ставэкспорт» - один из&nbsp;крупнейших экспортёров муки высшего сорта в&nbsp;страны ближнего
-                    и&nbsp;дальнего зарубежья.
+                    ООО «Ставэкспорт» - <span class="highlight">надежный</span> поставщик сельскохозяйственной
+                    продукции для производителей и трейдеров в России, Китае, Пакистане, Азербайджане, Иране,
+                    Турции, Ираке, Армении, Грузии и Беларуси.
                 </p>
                 <p class="head-export-info__text">
-                    Благодаря высокотехнологичному производству компания вошла в&nbsp;топ&nbsp;20&nbsp;мукомольных заводов
-                    и&nbsp;продолжает стабильно расти
+                    Экспортная деятельность - одна из <span class="highlight">приоритетных</span> и
+                    перспективных.
+                </p>
+                <p class="head-export-info__text">
+                    В структуре продаж ее доля составляет более 40 %,  цель -
+                    <span class="highlight">наращивание</span> товарооборота
                 </p>
             </div>
         </div>
@@ -104,10 +116,6 @@
                     </li>
                 </ul>
                 <div class="export-info__text-wrap h h_h5">
-                    <p class="export-info__text">
-                        Благодаря высокотехнологичному производству компания вошла в&nbsp;топ&nbsp;20&nbsp;мукомольных
-                        заводов и&nbsp;продолжает стабильно расти
-                    </p>
                     <p class="export-info__text">
                         Благодаря высокотехнологичному производству компания вошла в&nbsp;топ&nbsp;20&nbsp;мукомольных
                         заводов и&nbsp;продолжает стабильно расти
@@ -261,7 +269,7 @@
                                             </div>
                                             <div class="slide-activities__bg-wrap">
                                                 <img
-                                                    src="./assets/images/content/62b5f2f69f5e550019aa8ce9.webp"
+                                                    src="./assets/images/content/f3ad3f31a9ac109a528ac716ff533744.webp"
                                                     alt=""
                                                     class="slide-activities__bg"
                                                 />
@@ -279,7 +287,7 @@
                                             </div>
                                             <div class="slide-activities__bg-wrap">
                                                 <img
-                                                    src="./assets/images/content/truck.webp"
+                                                    src="./assets/images/content/cf45bfc013f4f0d282acebb052b4614f.webp"
                                                     alt=""
                                                     class="slide-activities__bg"
                                                 />
@@ -297,7 +305,7 @@
                                             </div>
                                             <div class="slide-activities__bg-wrap">
                                                 <img
-                                                    src="./assets/images/content/5ce327f64d6312d998d80c05c2c7abe1.webp"
+                                                    src="./assets/images/content/6130492dade10e6ae9f472f5bf20c2eb.webp"
                                                     alt=""
                                                     class="slide-activities__bg"
                                                 />
@@ -310,12 +318,12 @@
                                         <a href="#" class="slide-activities__inner">
                                             <div class="slide-activities__content">
                                                 <span class="slide-activities__subtitle h h_h5"
-                                                    >Своевременное предоставление всей документации</span
+                                                    >Соблюдение всех требований законодательства</span
                                                 >
                                             </div>
                                             <div class="slide-activities__bg-wrap">
                                                 <img
-                                                    src="./assets/images/content/truck.webp"
+                                                    src="./assets/images/content/f3ad3f31a9ac109a528ac716ff533744.webp"
                                                     alt=""
                                                     class="slide-activities__bg"
                                                 />
@@ -363,7 +371,8 @@
                         </svg>
                     </div>
                     <div class="list-i-item__text txt30 txt30_md">
-                        <span class="list-i-item__text-content"><span>Телефон:</span><a href="tel:8655971248">(86559) 7–12–48</a></span>
+                        <a href="tel:8655971248" class="list-i-item__text-content"><span>Телефон:</span>
+                            <p>(86559) 7–12–48</p></a>
                     </div>
                 </li>
                 <li class="manager__list-item list-i-item">
@@ -393,7 +402,8 @@
                         </svg>
                     </div>
                     <div class="list-i-item__text txt30 txt30_md">
-                        <span class="list-i-item__text-content"><span>Почта:</span><a href="mailto:export013@yandex.ru">export013@yandex.ru</a></span>
+                        <a href="mailto:export013@yandex.ru" class="list-i-item__text-content"><span>Почта:</span>
+                            <p>export013@yandex.ru</p></a>
                     </div>
                 </li>
             </ul>
@@ -474,7 +484,7 @@
         </div>
     </div>
     <div class="exported-products__bg-wrap">
-        <img src="./assets/images/bg/scale_12002.webp" alt="" class="exported-products__bg">
+        <img src="./assets/images/bg/TASS_53668420.webp" alt="" class="exported-products__bg">
     </div>
 </section>
 
@@ -861,49 +871,43 @@
                     <li class="certificates__slide slide-certificates swiper-slide">
                         <a href="#" class="slide-certificates__inner">
                             <div class="slide-certificates__image-wrap">
-                                <img src="./assets/images/content/Сертификат RU-FSSC-V5.webp" alt="" class="slide-certificates__image">
+                                <img src="./assets/images/content/d8bafefe3064fb946722029bd1eaff69.webp" alt="" class="slide-certificates__image">
                             </div>
-                            <span class="slide-certificates__txt txt20 txt20_md">Сертификат №&nbsp;567456938</span>
                         </a>
                     </li>
                     <li class="certificates__slide slide-certificates swiper-slide">
                         <a href="#" class="slide-certificates__inner">
                             <div class="slide-certificates__image-wrap">
-                                <img src="./assets/images/content/Сертификат RU-FSSC-V5.webp" alt="" class="slide-certificates__image">
+                                <img src="./assets/images/content/3cae8737ec47ca072fbdc666c59e4801.webp" alt="" class="slide-certificates__image">
                             </div>
-                            <span class="slide-certificates__txt txt20 txt20_md">Диплом «длинное название диплома»</span>
                         </a>
                     </li>
                     <li class="certificates__slide slide-certificates swiper-slide">
                         <a href="#" class="slide-certificates__inner">
                             <div class="slide-certificates__image-wrap">
-                                <img src="./assets/images/content/Сертификат RU-FSSC-V5.webp" alt="" class="slide-certificates__image">
+                                <img src="./assets/images/content/4d357ed2a2f452efcc0d2be05330a7d8ac2be044.webp" alt="" class="slide-certificates__image">
                             </div>
-                            <span class="slide-certificates__txt txt20 txt20_md">Сертификат №&nbsp;567456938</span>
                         </a>
                     </li>
                     <li class="certificates__slide slide-certificates swiper-slide">
                         <a href="#" class="slide-certificates__inner">
                             <div class="slide-certificates__image-wrap">
-                                <img src="./assets/images/content/Сертификат RU-FSSC-V5.webp" alt="" class="slide-certificates__image">
+                                <img src="./assets/images/content/d2be50912f8fb8c653b197341ffac803.webp" alt="" class="slide-certificates__image">
                             </div>
-                            <span class="slide-certificates__txt txt20 txt20_md">Диплом «длинное название диплома»</span>
                         </a>
                     </li>
                     <li class="certificates__slide slide-certificates swiper-slide">
                         <a href="#" class="slide-certificates__inner">
                             <div class="slide-certificates__image-wrap">
-                                <img src="./assets/images/content/Сертификат RU-FSSC-V5.webp" alt="" class="slide-certificates__image">
+                                <img src="./assets/images/content/d8bafefe3064fb946722029bd1eaff69.webp" alt="" class="slide-certificates__image">
                             </div>
-                            <span class="slide-certificates__txt txt20 txt20_md">Сертификат №&nbsp;567456938</span>
                         </a>
                     </li>
                     <li class="certificates__slide slide-certificates swiper-slide">
                         <a href="#" class="slide-certificates__inner">
                             <div class="slide-certificates__image-wrap">
-                                <img src="./assets/images/content/Сертификат RU-FSSC-V5.webp" alt="" class="slide-certificates__image">
+                                <img src="./assets/images/content/3cae8737ec47ca072fbdc666c59e4801.webp" alt="" class="slide-certificates__image">
                             </div>
-                            <span class="slide-certificates__txt txt20 txt20_md">Диплом «длинное название диплома»</span>
                         </a>
                     </li>
                 </ul>
@@ -1055,7 +1059,7 @@
                     <div class="card-activities-menu__inner">
                         <span class="card-activities-menu__title h h_h3">Мельницы</span>
                         <div class="card-activities-menu__bg-wrap">
-                            <img src="./assets/images/bg/AdobeStock_441468434.webp" alt="" class="card-activities-menu__bg">
+                            <img src="./assets/images/bg/c259490f9ab0becf7a54675ead8353c5.webp" alt="" class="card-activities-menu__bg">
                         </div>
                     </div>
                 </a>

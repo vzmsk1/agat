@@ -41,9 +41,25 @@
         display: flex;
         gap: 8rem;
 
+        .list-item-blank {
+            font-size: 4rem;
+
+            &::before {
+                transform: translateY(2rem);
+            }
+        }
+
         @media (max-width: 48em) {
             flex-direction: column;
             gap: 3.2rem;
+
+            .list-item-blank {
+                font-size: 3.2rem;
+
+                &::before {
+                    transform: translateY(1.2rem);
+                }
+            }
         }
     }
 

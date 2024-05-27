@@ -9,7 +9,22 @@ function initVideoJS() {
                 controls: true,
                 poster: data.length ? data : null
             });
+
+            if (
+                video.hasAttribute('data-videojs-autoplay') &&
+                (window.innerWidth > 768 || video.dataset.videojsAutoplay === 'md')
+            ) {
+                vjs.controls(false);
+                vjs.muted(true);
+                vjs.loop(true);
+                vjs.play().then(() => {
+                    console.log(vjs);
+                });
+            }
         });
     }
 }
-initVideoJS();
+
+window.addEventListener('load', function () {
+    setTimeout(initVideoJS, 100);
+});

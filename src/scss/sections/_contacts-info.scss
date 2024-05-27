@@ -97,6 +97,11 @@
         column-gap: 3.2rem;
     }
 
+    &__text-group {
+        display: flex;
+        flex-direction: column;
+    }
+
     &__text-content {
         display: flex;
         column-gap: 1rem;

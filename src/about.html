@@ -9,9 +9,12 @@
         <div class="wrapper">
             <include src="./components/header.html"></include>
             <main>
-                <section class="hero">
+                <section class="hero hero_has-video">
                     <div class="hero__container container">
-                        <span class="hero__title h h_h1">Компания</span>
+                        <div class='hero__group'>
+                            <span class="hero__title h h_h1">Компания</span>
+                            <span class='hero__subtitle h h_h4'>Расширять возможности, сохраняя самое лучшее</span>
+                        </div>
                         <button type="button" class="hero__btn btn btn_pink">
                             <span class="btn__txt">связаться с нами</span>
                         </button>
@@ -29,6 +32,13 @@
                         <a href="#" class="hero__nav-link txt30 txt30_md"><span>Контакты</span></a>
                     </nav>
                     <div class="hero__bg-wrap">
+                        <video
+                        data-videojs
+                        data-videojs-autoplay
+                        class=hero__video"
+                    >
+                        <source src="./assets/video/sample-video.mp4" type="video/mp4" />
+                    </video>
                         <img
                             src="./assets/images/bg/james-baltz-_pBBkarmFTs-unsplash.webp"
                             alt=""
@@ -114,7 +124,7 @@
                                             </div>
                                             <div class="slide-activities__bg-wrap">
                                                 <img
-                                                    src="./assets/images/bg/pc2-scaled.webp"
+                                                    src="./assets/images/bg/6db1dda17775d434db131c3dde9aab72.webp"
                                                     alt=""
                                                     class="slide-activities__bg"
                                                 />

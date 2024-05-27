@@ -67,6 +67,18 @@
     }
 }
 
+.txt40 {
+    font-size: 4rem;
+
+    &_md {
+        font-weight: 500;
+    }
+
+    @media (max-width: 48em) {
+        font-size: 3.2rem;
+    }
+}
+
 .fw-700 {
     font-weight: 700;
 }

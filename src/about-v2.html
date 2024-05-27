@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>О компании</title>
+    </head>
+    <body>
+        <div class="wrapper">
+            <include src="./components/header.html"></include>
+            <main>
+                <section class="hero hero_has-video">
+                    <div class="hero__container container">
+                        <div class='hero__group'>
+                            <span class="hero__title h h_h1">Компания</span>
+                            <span class='hero__subtitle h h_h4'>Расширять возможности, сохраняя самое лучшее</span>
+                        </div>
+                        <button type="button" class="hero__btn btn btn_pink">
+                            <span class="btn__txt">связаться с нами</span>
+                        </button>
+                    </div>
+                    <nav class="hero__nav">
+                        <a href="#" class="hero__nav-link txt30 txt30_md _is-active"
+                            ><span>О холдинге</span></a
+                        >
+                        <button type="button" class="hero__nav-link activities-btn txt30 txt30_md">
+                            <span>Направления деятельности</span>
+                        </button>
+                        <a href="#" class="hero__nav-link txt30 txt30_md"><span>Продукция</span></a>
+                        <a href="#" class="hero__nav-link txt30 txt30_md"><span>Пресс-центр</span></a>
+                        <a href="#" class="hero__nav-link txt30 txt30_md"><span>Экспорт</span></a>
+                        <a href="#" class="hero__nav-link txt30 txt30_md"><span>Контакты</span></a>
+                    </nav>
+                    <div class="hero__bg-wrap">
+                        <video
+                        data-videojs
+                        data-videojs-autoplay
+                        class=hero__video"
+                    >
+                        <source src="./assets/video/sample-video.mp4" type="video/mp4" />
+                    </video>
+                        <img
+                            src="./assets/images/bg/james-baltz-_pBBkarmFTs-unsplash.webp"
+                            alt=""
+                            class="hero__bg"
+                        />
+                    </div>
+                </section>
+                <section class="info-complexes info-complexes_holding">
+                    <div class="info-complexes__container container">
+                        <div class="info-complexes__icon">
+                            <img src="./assets/images/logo-1.png" alt="" class="info-complexes__icon-image" />
+                        </div>
+                        <span class="info-complexes__subtitle h h_h4"
+                            ><span
+                                >История успеха компании <span class="highlight">АГАТ</span> специалиста
+                                в области производства сельскохозяйственной продукции, берет своё начало в
+                                 <span class="highlight">1995</span>  году</span
+                            >
+                            <span
+                                >В истории компании прослеживается преемственность и последовательность,
+                                а также стремление постоянно совершенствоваться и идти в ногу
+                                со временем.</span
+                            >
+                        </span>
+                    </div>
+                </section>
+                <include src="./components/_about-holding.html"></include>
+                <section class="activities activities_holding">
+                    <div class="activities__container container">
+                        <span class="activities__title h h_h1">Наши ценности</span>
+                        <div class="activities__carousel activities__carousel_md">
+                            <button type="button" class="activities__nav-btn i-btn i-btn_arr-prev">
+                                <svg>
+                                    <use href="#arr-left-svg"></use>
+                                </svg>
+                            </button>
+                            <div class="activities__swiper swiper">
+                                <ul class="activities__swiper-wrapper swiper-wrapper">
+                                    <li
+                                        class="activities__slide slide-activities slide-activities_centered swiper-slide"
+                                    >
+                                        <div class="slide-activities__inner">
+                                            <div class="slide-activities__content">
+                                                <span class="slide-activities__subtitle h h_h5"
+                                                    >Хранить традиции</span
+                                                >
+                                            </div>
+                                            <div class="slide-activities__bg-wrap">
+                                                <img
+                                                    src="./assets/images/bg/photo_2024-04-30_12-45-16.webp"
+                                                    alt=""
+                                                    class="slide-activities__bg"
+                                                />
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li
+                                        class="activities__slide slide-activities slide-activities_centered swiper-slide"
+                                    >
+                                        <div class="slide-activities__inner">
+                                            <div class="slide-activities__content">
+                                                <span class="slide-activities__subtitle h h_h5"
+                                                    >Развивать профессионализм сотрудников</span
+                                                >
+                                            </div>
+                                            <div class="slide-activities__bg-wrap">
+                                                <img
+                                                    src="./assets/images/bg/b7a4dec327473d78739532095170dc68.webp"
+                                                    alt=""
+                                                    class="slide-activities__bg"
+                                                />
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li
+                                        class="activities__slide slide-activities slide-activities_centered swiper-slide"
+                                    >
+                                        <div class="slide-activities__inner">
+                                            <div class="slide-activities__content">
+                                                <span class="slide-activities__subtitle h h_h5"
+                                                    >Быть порядочными во всем и со всеми</span
+                                                >
+                                            </div>
+                                            <div class="slide-activities__bg-wrap">
+                                                <img
+                                                    src="./assets/images/bg/6db1dda17775d434db131c3dde9aab72.webp"
+                                                    alt=""
+                                                    class="slide-activities__bg"
+                                                />
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <button type="button" class="activities__nav-btn i-btn i-btn_arr-next">
+                                <svg>
+                                    <use href="#arr-right-svg"></use>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="activities__bg-wrap">
+                        <img
+                            class="activities__bg"
+                            src="./assets/images/bg/ee389e1aab5464b4df3621e0e58fa05b.webp"
+                            alt=""
+                        />
+                    </div>
+                </section>
+                <include src="./components/_quote.html"></include>
+                <include src="./components/_mission.html"></include>
+                <include src="./components/_standards.html"></include>
+                <section class="partners">
+                    <div class="partners__container container">
+                        <span class="partners__title h h_h1">Наши партнёры</span>
+                        <p class="partners__text txt30 txt30_md">
+                            <span>Нам важны отношения, основанные на доверии, взаимопомощи и ответственности.</span>
+                            <span>Мы доверяем нашим партнёрам и нацелены на конструктивный диалог.</span>
+                            <span>Мы стремимся к тому, чтобы покупатели доверяли нам и нашему продукту.</span>
+                        </p>
+                        <div class="partners__group partners__group_noi">
+                            <div class="partners__item item-partners">
+                                <span class='item-partners__num h h_h3'>1</span>
+                                <span class='item-partners__text txt30 txt30_md'>ООО «КФХ Агат» п.Терек</span>
+                            </div>
+                            <div class="partners__item item-partners">
+                                <span class='item-partners__num h h_h3'>2</span>
+                                <span class='item-partners__text txt30 txt30_md'>СПК «Владимировский» Левокумский р-он</span>
+                            </div>
+                            <div class="partners__item item-partners">
+                                <span class='item-partners__num h h_h3'>3</span>
+                                <span class='item-partners__text txt30 txt30_md'>АО «Агрокомплекс» (сахар)</span>
+                            </div>
+                            <div class="partners__item item-partners">
+                                <span class='item-partners__num h h_h3'>4</span>
+                                <span class='item-partners__text txt30 txt30_md'>ООО «ТСП» (растительное масло)</span>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+            </main>
+            <include src="./components/_activities-menu.html"></include>
+            <include src="./components/footer.html"></include>
+            <include src="./components/modals.html"></include>
+            <include src="./components/svg.html"></include>
+        </div>
+    </body>
+</html>

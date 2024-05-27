@@ -64,6 +64,8 @@
     }
 
     &__content {
+        padding-bottom: 24rem;
+
         display: flex;
         flex-direction: column;
 
@@ -81,6 +83,7 @@
 
             @media (max-width: 48em) {
                 margin-bottom: 9.6rem;
+                padding-bottom: 0;
 
                 width: 21.6rem;
                 height: 15rem;
@@ -99,6 +102,9 @@
     }
 
     &__subtitle {
+        @media (min-width: 48em) {
+            max-width: 69rem;
+        }
         @media (max-width: 48em) {
             font-size: 3.2rem;
         }

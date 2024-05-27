@@ -24,6 +24,7 @@
         @media (min-width: 48em) {
             display: flex;
             flex-direction: column;
+            row-gap: 2rem;
         }
     }
 
@@ -34,6 +35,10 @@
         row-gap: 7rem;
         width: 100%;
 
+        &_noi {
+            grid-template-columns: 1fr;
+        }
+
         @media (min-width: 48em) {
             grid-template-columns: repeat(4, 1fr);
             gap: 5.6rem;
@@ -42,6 +47,45 @@
 }
 
 .item-partners {
-    &__image-wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 4rem;
+
+    text-align: center;
+
+    &__num {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        width: 10rem;
+        height: 10rem;
+
+        background: linear-gradient(
+            236.5deg,
+            #c10b73 -4.18%,
+            #b6136d 13.92%,
+            #f55bb2 30.54%,
+            #b6136d 49.38%,
+            #f55bb2 66.56%,
+            #b6136d 83.74%,
+            #c10b73 106.46%
+        );
+
+        color: $white;
+
+        @media (max-width: 48em) {
+            width: 12rem;
+            height: 12rem;
+        }
+    }
+
+    &__text {
+        max-width: 36rem;
+
+        @media (max-width: 48em) {
+            max-width: 48rem;
+        }
     }
 }

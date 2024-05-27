@@ -24,6 +24,14 @@
         }
     }
 
+    &__list {
+        margin-top: 2.4rem;
+
+        @media (max-width: 48em) {
+            margin-top: 4.8rem;
+        }
+    }
+
     &__container {
         display: flex;
         flex-direction: column;
@@ -149,12 +157,6 @@
 
                 &__text {
                     width: 100%;
-                }
-
-                &__text-content {
-                    span {
-                        margin-right: auto;
-                    }
                 }
 
                 &__inner {

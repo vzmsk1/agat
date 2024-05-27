@@ -61,7 +61,13 @@
                         <a href="#" class="hero__nav-link txt30 txt30_md"><span>Контакты</span></a>
                     </nav>
                     <div class="hero__bg-wrap">
-                        <img src="./assets/images/bg/AdobeStock_241420077.webp" alt="" class="hero__bg" />
+                        <video
+                        data-videojs
+                        data-videojs-autoplay='md'
+                        class=hero__video"
+                        >
+                            <source src="./assets/video/sample-video.mp4" type="video/mp4" />
+                        </video>
                     </div>
                 </section>
                 <section class="info-complexes info-complexes_flour">
@@ -72,11 +78,11 @@
                             </svg>
                         </div>
                         <span class="info-complexes__subtitle h h_h4"
-                            ><span>Мука традиционно была символом богатства, здоровья и плодородия. </span>
-                            <span>Все наши традиционные праздники невозможно представить без выпечки.</span>
+                            ><span>Мука традиционно была символом богатства, <span class='highlight'>здоровья</span> и плодородия. </span>
+                            <span>Все наши традиционные <span class='highlight'>праздники</span> невозможно представить без выпечки.</span>
                             <span
-                                >Поэтому мы уделяем особое внимание качеству нашей муки, делая ставку на
-                                зерно, выращенного в лучших климатических условиях и подходящем регионе, а
+                                >Поэтому мы уделяем особое внимание <span class='highlight'>качеству</span> нашей муки, делая ставку на
+                                зерно, выращенного в лучших <span class='highlight'>климатических</span> условиях и подходящем регионе, а
                                 также на высокотехнологичное мельничное оборудование.</span
                             >
                         </span>
@@ -90,7 +96,7 @@
                 цены</span>
             <div class="production-main__tabs">
                 <button type="button" class="production-main__tab tab txt30">
-                    <span class="tab__inner">Мука в&nbsp;мешках</span>
+                    <span class="tab__inner">Мука в&nbsp;мешках 25кг, 50 кг</span>
                 </button>
                 <button type="button" class="production-main__tab tab txt30">
                     <span class="tab__inner">Мука в&nbsp;пакетах 1кг, 2кг</span>
@@ -109,8 +115,8 @@
                         <use href="#wheat-svg-2"></use>
                     </svg>
                 </div>
-                <span class="info-complexes__subtitle h h_h4"><span>История успеха компании <span class="highlight">АГАТ</span> специалиста в&nbsp;области
-                        производства сельскохозяйственной продукции, берет своё начало в &nbsp;<span class="highlight">1995</span>&nbsp; году.</span>
+                <span class="info-complexes__subtitle h h_h4"><span>Пшеничные отруби являются хорошим кормом для всех видов животных.</span>
+                    <span>Фасовка осуществляется как в мешках, так и насыпью</span>
                 </span>
             </div>
         </section>
@@ -118,16 +124,27 @@
             <div class="production-main__group">
     <div class="production-main__card card-production-main card-production-main_has-list">
         <div class="card-production-main__image-wrap card-production-main__image-wrap_gold">
-            <img src="./assets/images/products/Remove-bg.ai_1714755524334.webp" alt="" class="card-production-main__image">
+            <img src="./assets/images/products/Remove-bg.ai_1716542864570.webp" alt="" class="card-production-main__image">
         </div>
         <div class="card-production-main__content">
             <span class="card-production-main__title">Отруби в мешках по 25 кг</span>
-            <ul class="card-production-main__list">
-                <li class="card-production-main__list-item list-item-def txt30 txt30_md">Клейковина&nbsp;— 28%</li>
-                <li class="card-production-main__list-item list-item-def txt30 txt30_md">Белизна&nbsp;— 60 ед</li>
-                <li class="card-production-main__list-item list-item-def txt30 txt30_md">ИДК&nbsp;— 65-70 ед</li>
-                <li class="card-production-main__list-item list-item-def txt30 txt30_md">Ч.П.- 350 сек.</li>
-            </ul>
+            <div class="card-production-main__list-wrap">
+                <span class="card-production-main__subtitle">состав пшеничных отрубей:</span>
+                <ul class="card-production-main__list">
+                    <li class="card-production-main__list-item list-item-def txt30 txt30_md">Воды — 14,8%</li>
+                    <li class="card-production-main__list-item list-item-def txt30 txt30_md">
+                        Белки&nbsp;— 15,5%
+                    </li>
+                    <li class="card-production-main__list-item list-item-def txt30 txt30_md">Жиры&nbsp;— 3,2%</li>
+                    <li class="card-production-main__list-item list-item-def txt30 txt30_md">
+                        Клетчатка&nbsp;— 8,4%
+                    </li>
+                    <li class="card-production-main__list-item list-item-def txt30 txt30_md">
+                        Безазотистые экстрактивные вещества&nbsp;— 53,2%
+                    </li>
+                    <li class="card-production-main__list-item list-item-def txt30 txt30_md">Золы&nbsp;— 4,9%</li>
+                </ul>
+            </div>
             <button type="button" class="card-production-main__btn btn btn_pink">
                 <span class="btn__txt">Запросить прайс</span>
             </button>
@@ -139,12 +156,24 @@
         </div>
         <div class="card-production-main__content">
             <span class="card-production-main__title">Отруби насыпью</span>
-            <ul class="card-production-main__list">
-                <li class="card-production-main__list-item list-item-def txt30 txt30_md">Клейковина&nbsp;— 30%</li>
-                <li class="card-production-main__list-item list-item-def txt30 txt30_md">Белизна&nbsp;— 60 ед.</li>
-                <li class="card-production-main__list-item list-item-def txt30 txt30_md">ИДК&nbsp;— 65-70 ед.</li>
-                <li class="card-production-main__list-item list-item-def txt30 txt30_md">Ч.П.- 320 сек.</li>
-            </ul>
+            <div class="card-production-main__list-wrap">
+                <span class="card-production-main__subtitle">состав пшеничных отрубей:</span>
+
+                <ul class="card-production-main__list">
+                    <li class="card-production-main__list-item list-item-def txt30 txt30_md">Воды — 14,8%</li>
+                    <li class="card-production-main__list-item list-item-def txt30 txt30_md">
+                        Белки&nbsp;— 15,5%
+                    </li>
+                    <li class="card-production-main__list-item list-item-def txt30 txt30_md">Жиры&nbsp;— 3,2%</li>
+                    <li class="card-production-main__list-item list-item-def txt30 txt30_md">
+                        Клетчатка&nbsp;— 8,4%
+                    </li>
+                    <li class="card-production-main__list-item list-item-def txt30 txt30_md">
+                        Безазотистые экстрактивные вещества&nbsp;— 53,2%
+                    </li>
+                    <li class="card-production-main__list-item list-item-def txt30 txt30_md">Золы&nbsp;— 4,9%</li>
+                </ul>
+            </div>
             <button type="button" class="card-production-main__btn btn btn_pink">
                 <span class="btn__txt">Запросить прайс</span>
             </button>
@@ -346,7 +375,7 @@
                     <div class="card-activities-menu__inner">
                         <span class="card-activities-menu__title h h_h3">Мельницы</span>
                         <div class="card-activities-menu__bg-wrap">
-                            <img src="./assets/images/bg/AdobeStock_441468434.webp" alt="" class="card-activities-menu__bg">
+                            <img src="./assets/images/bg/c259490f9ab0becf7a54675ead8353c5.webp" alt="" class="card-activities-menu__bg">
                         </div>
                     </div>
                 </a>

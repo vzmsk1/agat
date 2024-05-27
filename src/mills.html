@@ -10,7 +10,7 @@
         <div class="wrapper">
             <include src="./components/header.html"></include>
             <main>
-                <section class="hero">
+                <section class="hero hero_has-video">
                     <div class="hero__container container">
                         <span class="hero__title h h_h1">Мельничный комплекс</span>
                         <button type="button" class="hero__btn btn btn_pink">
@@ -28,11 +28,17 @@
                         <a href="#" class="hero__nav-link txt30 txt30_md"><span>Контакты</span></a>
                     </nav>
                     <div class="hero__bg-wrap">
-                        <img
-                            src="./assets/images/bg/87935dad728bb21c58038d51ea602d27.webp"
-                            alt=""
-                            class="hero__bg"
-                        />
+                        <video
+                                        data-videojs
+                                        data-videojs-autoplay
+                                        class=hero__video"
+                                    >
+                                        <source src="./assets/video/sample-video.mp4" type="video/mp4" />
+                                    </video> <img
+                                            src="./assets/images/bg/87935dad728bb21c58038d51ea602d27.webp"
+                                            alt=""
+                                            class="hero__bg"
+                                        />
                     </div>
                 </section>
                 <section class="info-complexes info-complexes_mills">
@@ -44,14 +50,16 @@
                         </div>
                         <span class="info-complexes__subtitle h h_h4"
                             ><span
-                                >Мукомольный комплекс с 2 линиями переработки с мощностью по 
-                                <span class="highlight">250</span> тонн каждая.</span
+                                >Мукомольное производство агрохолдинга Агат представлено мельничным производством, расположенном в    <span class='highlight'>п.Терек</span> Буденновского района.
+</span
                             >
                             <span
-                                >Современное турецкое оборудование фирмы
-                                <span class="highlight">UNORMAK</span> позволяет практически полностью
-                                автоматизировать процесс производства продукции.</span
+                                >В 2023 году введен в эксплуатацию    <span class='highlight'>новый</span>    мукомольный комплекс с ежедневной производительностью 500 тонн.
+</span
                             >
+                        <span>
+                            Современное турецкое оборудование фирмы    <span class='highlight'>UNORMAK</span> позволяет практически полностью автоматизировать процесс производства муки
+                        </span>
                         </span>
                     </div>
                 </section>
@@ -125,8 +133,9 @@
                                             </svg>
                                         </div>
                                         <div class="list-i-item__text txt30 txt30_md">
-                                            <a href="tel:8655971248" class="list-i-item__text-content"
-                                                ><span>Телефон:</span>(86559) 7–12–48</a
+                                            <span class="list-i-item__text-content"
+                                                ><span>Телефон:</span><p class='list-i-item__text-group'><a
+                                                href='tel:79614642222'>+7(961)464-22-22</a><a href='tel:78655964004'>+7(865)596-40-04</a></p></span
                                             >
                                         </div>
                                     </li>

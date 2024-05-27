@@ -118,6 +118,35 @@
 }
 
 .info-complexes {
+    &_livestock {
+        .info-complexes {
+            &__subtitle {
+                @media (min-width: 48em) {
+                    max-width: 120.9rem;
+                }
+            }
+        }
+    }
+
+    &_elevators {
+        .info-complexes {
+            &__subtitle {
+                row-gap: 8rem;
+
+                @media (min-width: 48em) {
+                    max-width: 116.5rem;
+                    row-gap: 4rem;
+                }
+                @media (max-width: 48em) {
+                    .highlight {
+                        padding: 0.3rem 3rem;
+                        line-height: 135%;
+                    }
+                }
+            }
+        }
+    }
+
     &_silo-tower {
         .info-complexes {
             &__icon {
@@ -146,11 +175,12 @@
             }
         }
     }
+
     &_wheat {
         .info-complexes {
             &__subtitle {
                 @media (min-width: 48em) {
-                    max-width: 92.5rem;
+                    max-width: 110.7rem;
                 }
             }
             &__icon {
@@ -165,6 +195,8 @@
     &_flour {
         .info-complexes {
             &__subtitle {
+                row-gap: 6rem;
+
                 @media (max-width: 48em) {
                     row-gap: normal;
                 }
@@ -190,6 +222,8 @@
         .info-complexes {
             &__subtitle {
                 max-width: 129.7rem;
+
+                row-gap: 4rem;
             }
         }
     }
