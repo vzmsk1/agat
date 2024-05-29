@@ -278,7 +278,9 @@
             .highlight {
                 margin: 0;
 
-                line-height: 183%;
+                height: 5rem;
+
+                line-height: 90%;
             }
         }
     }
@@ -395,14 +397,28 @@
     }
 }
 
+.txt30 .highlight {
+    height: 4.5rem;
+
+    line-height: 140%;
+
+    @media (max-width: 48em) {
+        height: 5.5rem;
+
+        line-height: 94%;
+    }
+}
+
 .highlight {
     margin-right: 0.5rem;
     padding: 0 2rem;
 
+    display: inline-block;
+    height: 5.5rem;
     border-radius: 7.3rem;
 
     color: $white;
-    line-height: 1;
+    line-height: 127%;
 
     background-color: $pink;
 

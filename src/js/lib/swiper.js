@@ -59,6 +59,12 @@ function initSliders() {
                 el: '.news__pagination',
                 type: 'bullets',
                 clickable: true
+            },
+            on: {
+                afterInit: (swiper) => {
+                    swiper.pagination.update();
+                    swiper.slideTo(0);
+                }
             }
         });
     }
@@ -231,4 +237,12 @@ document.addEventListener('DOMContentLoaded', function () {
     initSliders();
 });
 
-window.addEventListener('resize', initSliders);
+window.addEventListener('resize', function () {
+    const ww = window.innerWidth;
+
+    setTimeout(() => {
+        if (ww === window.innerWidth) {
+            initSliders();
+        }
+    }, 500);
+});

@@ -89,6 +89,10 @@ body::after {
                 }
             }
         }
+
+        @media (max-width: 48em) {
+            display: none;
+        }
     }
 
     // .modal__wrapper
@@ -238,6 +242,29 @@ body::after {
     &__scheme {
         @media (max-width: 48em) {
             height: 100%;
+        }
+    }
+
+    &__play-btn {
+        position: absolute;
+
+        border-radius: 50%;
+
+        &[data-scheme-btn='1'] {
+            top: 31.9rem;
+            left: 120.7rem;
+        }
+        &[data-scheme-btn='2'] {
+            top: 90rem;
+            left: 29.3rem;
+        }
+        &[data-scheme-btn='3'] {
+            top: 142.9rem;
+            left: 79.2rem;
+        }
+
+        img {
+            width: 10rem;
         }
     }
 }
