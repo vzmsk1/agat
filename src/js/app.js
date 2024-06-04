@@ -38,9 +38,6 @@ import './lib/dd';
 // swiper
 import './lib/swiper';
 
-// yandex map
-import './lib/map';
-
 // input mask
 import './lib/inputmask';
 
