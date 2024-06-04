@@ -84,12 +84,14 @@
 }
 
 .item-partners {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    row-gap: 4rem;
+    &.swiper-slide {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        row-gap: 4rem;
 
-    text-align: center;
+        text-align: center;
+    }
 
     &__num {
         display: inline-flex;
