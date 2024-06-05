@@ -153,6 +153,11 @@
     }
 
     &__icon {
+        margin: 0 auto;
+    }
+
+    img,
+    &__icon {
         svg {
             width: 5rem;
             height: 5rem;
