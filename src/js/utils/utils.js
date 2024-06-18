@@ -39,7 +39,10 @@ export const menuInit = () => {
         });
 
         mm.addEventListener('change', function () {
-            if (!mm.matches && document.documentElement.classList.contains('_menu-opened')) menuClose();
+            if (!mm.matches && document.documentElement.classList.contains('_menu-opened')) {
+                menuClose();
+                document.documentElement.classList.remove('_show-lang-dropdown');
+            }
         });
     }
 };

@@ -4,6 +4,37 @@
             <img src="./assets/images/logo.svg" alt="" class="header__logo header__logo_light" />
             <img src="./assets/images/logo-dark.svg" alt="" class="header__logo header__logo_dark" />
         </a>
+        <div data-da=".hamburger-menu__container,768,last" class="header__lang-dropdown lang-dropdown">
+            <button type="button" class="lang-dropdown__btn">
+                <span class="lang-dropdown__btn-txt">RUS</span
+                ><svg class="lang-dropdown__btn-icon"><use href="#sel-arr-svg"></use></svg>
+            </button>
+            <div data-da=".wrapper,768,last" class="lang-dropdown__body">
+                <button type="button" class="lang-dropdown__close-btn">
+                    <svg class="lang-dropdown__close-btn-icon"><use href="#cross-svg"></use></svg>
+                </button>
+                <ul class="lang-dropdown__list">
+                    <li class="lang-dropdown__item">
+                        <input
+                            data-text="RUS"
+                            checked
+                            class="lang-dropdown__input"
+                            type="radio"
+                            name="headerLang"
+                        />
+                        <span class="lang-dropdown__item-txt">(RUS) Русский</span>
+                    </li>
+                    <li class="lang-dropdown__item">
+                        <input data-text="ENG" class="lang-dropdown__input" type="radio" name="headerLang" />
+                        <span class="lang-dropdown__item-txt">(Eng) English</span>
+                    </li>
+                    <li class="lang-dropdown__item">
+                        <input data-text="CHI" class="lang-dropdown__input" type="radio" name="headerLang" />
+                        <span class="lang-dropdown__item-txt">(chi) 中文</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
         <button type="button" class="header__btn btn btn_pink">
             <span class="btn__txt">связаться с нами</span>
         </button>

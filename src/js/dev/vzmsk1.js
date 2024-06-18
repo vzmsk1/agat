@@ -32,6 +32,31 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
+    if (document.querySelector('.lang-dropdown__btn')) {
+        const btn = document.querySelector('.lang-dropdown__btn');
+        let btnText = btn.querySelector('.lang-dropdown__btn-txt');
+
+        document.querySelectorAll('.lang-dropdown__input').forEach((input) => {
+            input.addEventListener('click', () => {
+                console.log(input, input.checked);
+                input.checked && (btnText.innerHTML = input.dataset.text);
+            });
+        });
+
+        document.addEventListener('click', function (e) {
+            if (e.target.closest('.lang-dropdown__btn')) {
+                document.documentElement.classList.toggle('_show-lang-dropdown');
+            } else if (
+                (window.innerWidth > 768 && !e.target.closest('.lang-dropdown')) ||
+                (window.innerWidth <= 768 &&
+                    (!e.target.closest('.lang-dropdown__body') ||
+                        e.target.closest('.lang-dropdown__close-btn')))
+            ) {
+                document.documentElement.classList.remove('_show-lang-dropdown');
+            }
+        });
+    }
+
     if (document.querySelectorAll('.activities-btn').length) {
         document.querySelectorAll('.activities-btn').forEach((el) => {
             el.addEventListener('click', function () {
