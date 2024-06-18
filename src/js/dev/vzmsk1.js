@@ -38,7 +38,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
         document.querySelectorAll('.lang-dropdown__input').forEach((input) => {
             input.addEventListener('click', () => {
-                console.log(input, input.checked);
                 input.checked && (btnText.innerHTML = input.dataset.text);
             });
         });
