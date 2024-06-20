@@ -1,7 +1,32 @@
 import gsap from 'gsap';
+import { ScrollToPlugin, ScrollTrigger } from 'gsap/all';
 import { bodyLock, bodyUnlock, removeClasses } from '../utils/utils';
 
+gsap.registerPlugin(ScrollToPlugin, ScrollTrigger);
+
 document.addEventListener('DOMContentLoaded', function () {
+    if (document.querySelector('.scroll-btn')) {
+        const btn = document.querySelector('.scroll-btn');
+
+        gsap.timeline({
+            scrollTrigger: {
+                trigger: document.querySelector('section:last-of-type'),
+                start: 'center bottom',
+                end: 'bottom bottom',
+                onEnter: () => {
+                    btn.classList.add('_is-visible');
+                },
+                onLeaveBack: () => {
+                    btn.classList.remove('_is-visible');
+                }
+            }
+        });
+
+        btn.addEventListener('click', function () {
+            gsap.to(window, { duration: 1, scrollTo: 0 });
+        });
+    }
+
     if (document.querySelectorAll('.about-holding__tab').length) {
         const tabs = Array.from(document.querySelectorAll('.about-holding__tab'));
         const slides = Array.from(document.querySelectorAll('.about-holding__slide'));
