@@ -11,7 +11,8 @@
 
         width: 100%;
         height: 82%;
-        background: url('./assets/images/bg-svg/liner-gold-2.svg') center / cover no-repeat;
+
+        background: linear-gradient(263.51deg, #b1934e -1.67%, #f2d790 35.23%, #b1934e 98.62%);
 
         @media (max-width: 48em) {
             height: 90%;

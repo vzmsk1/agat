@@ -34,12 +34,20 @@
 
     &__nav {
         display: flex;
-        gap: 4rem;
+        gap: 3rem;
 
         @media (max-width: 48em) {
             flex-direction: column;
             align-items: flex-start;
             gap: 6.4rem;
+        }
+    }
+
+    &__nav-link {
+        @media (min-width: 48em) {
+            &.txt30 {
+                font-size: 2.5rem;
+            }
         }
     }
 }

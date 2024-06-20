@@ -398,13 +398,9 @@
 }
 
 .txt30 .highlight {
-    height: 4.5rem;
-
     line-height: 140%;
 
     @media (max-width: 48em) {
-        height: 5.5rem;
-
         line-height: 94%;
     }
 }
@@ -413,8 +409,9 @@
     margin-right: 0.5rem;
     padding: 0 2rem;
 
-    display: inline-block;
-    height: 5.5rem;
+    display: inline-flex;
+    align-items: center;
+    height: 3.8rem;
     border-radius: 7.3rem;
 
     color: $white;
@@ -426,6 +423,7 @@
         padding: 0.8rem 3rem;
         margin: 0 0.5rem;
 
+        height: 5rem;
         border-radius: 8.4rem;
 
         &_block {
