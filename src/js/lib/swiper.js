@@ -236,8 +236,9 @@ function initSliders() {
         new Swiper('.partners__swiper', {
             modules: [Pagination, Navigation],
             speed: 800,
-            loop: true,
+            rewind: true,
             slidesPerView: 1,
+
             spaceBetween: remToPx(6),
             navigation: {
                 prevEl: '.partners .i-btn_arr-prev',
@@ -250,7 +251,8 @@ function initSliders() {
             },
             breakpoints: {
                 768: {
-                    slidesPerView: 4
+                    slidesPerView: 4,
+                    slidesPerGroup: 4
                 }
             }
         });
