@@ -4,6 +4,24 @@ import { bodyLock, bodyUnlock, removeClasses } from '../utils/utils';
 
 gsap.registerPlugin(ScrollToPlugin, ScrollTrigger);
 
+document.addEventListener('click', function ({ target }) {
+    if (
+        document.documentElement.classList.contains('_show-activities-menu') &&
+        !target.closest('.activities-btn') &&
+        (target.closest('.activities-menu__close-btn') || !target.closest('.activities-menu__container'))
+    ) {
+        document.documentElement.classList.remove('_show-activities-menu');
+
+        if (!document.documentElement.classList.contains('_show-activities-menu_lock')) {
+            bodyUnlock();
+        } else {
+            setTimeout(() => {
+                document.documentElement.classList.remove('_show-activities-menu_lock');
+            }, 0);
+        }
+    }
+});
+
 document.addEventListener('DOMContentLoaded', function () {
     if (document.querySelector('.scroll-btn')) {
         const btn = document.querySelector('.scroll-btn');
@@ -83,7 +101,9 @@ document.addEventListener('DOMContentLoaded', function () {
 
     if (document.querySelectorAll('.activities-btn').length) {
         document.querySelectorAll('.activities-btn').forEach((el) => {
-            el.addEventListener('click', function () {
+            el.addEventListener('click', function (e) {
+                e.preventDefault();
+
                 document.documentElement.classList.add('_show-activities-menu');
 
                 if (document.documentElement.classList.contains('lock')) {
@@ -93,20 +113,6 @@ document.addEventListener('DOMContentLoaded', function () {
                 }
             });
         });
-        const closeBtn = document.querySelector('.activities-menu__close-btn');
-
-        closeBtn &&
-            closeBtn.addEventListener('click', function () {
-                document.documentElement.classList.remove('_show-activities-menu');
-
-                if (!document.documentElement.classList.contains('_show-activities-menu_lock')) {
-                    bodyUnlock();
-                } else {
-                    setTimeout(() => {
-                        document.documentElement.classList.remove('_show-activities-menu_lock');
-                    }, 0);
-                }
-            });
     }
 
     if (document.querySelectorAll('.plants-info__card').length) {

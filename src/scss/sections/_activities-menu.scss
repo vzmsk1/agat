@@ -9,8 +9,6 @@
 
     overflow: auto;
 
-    background-color: $white;
-
     opacity: 0;
     visibility: hidden;
 
@@ -18,21 +16,37 @@
         opacity 0.5s ease,
         visibility 0.5s ease;
 
+    @media (min-width: 48em) {
+        display: flex;
+        align-items: center;
+
+        background: rgba(37, 37, 37, 0.3);
+        backdrop-filter: blur(16px);
+    }
+
     ._show-activities-menu & {
         opacity: 1;
         visibility: visible;
     }
 
     &__container {
-        padding: 14.4rem 4rem 11.3rem 4rem;
-
         display: flex;
         flex-direction: column;
+
+        background-color: $white;
 
         @media (max-width: 48em) {
             &.container {
                 padding: 4.6rem 4rem 6.4rem 4rem;
             }
+        }
+
+        @media (min-width: 48em) {
+            padding: 7.5rem;
+
+            max-width: 156.2rem;
+            border-radius: 10rem;
+            box-shadow: 0.6rem 0.6rem 7rem rgba(98, 98, 98, 0.2);
         }
     }
 
@@ -117,7 +131,7 @@
                     border-radius: 10rem 0 0 0;
 
                     &:last-child {
-                        border-radius: 0 0 10rem 0;
+                        border-radius: 0 10rem 0 0;
                     }
                 }
             }
@@ -157,7 +171,7 @@
 
     &__video video,
     &__inner {
-        height: 40.6rem;
+        height: 32rem;
 
         @media (max-width: 48em) {
             height: 35.6rem;
@@ -165,6 +179,9 @@
     }
 
     &__title {
+        position: relative;
+        z-index: 2;
+
         color: $white;
 
         @media (max-width: 48em) {
@@ -176,7 +193,6 @@
 
     &__bg-wrap {
         position: absolute;
-        z-index: -1;
         top: 0;
         left: 0;
 

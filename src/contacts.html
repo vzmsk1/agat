@@ -55,7 +55,64 @@
                     </div>
                 </section>
                 <include src="./components/_contacts.html"></include>
-                <include src="./components/_request-form.html"></include>
+                <section class="request">
+                    <div class="request__container container">
+                        <div class="request__image-wrap">
+                            <img
+                                src="./assets/images/content/07268b1ccaf76c77a13f729d37082a36.webp"
+                                alt=""
+                                class="request__image"
+                            />
+                        </div>
+                        <div class="request__content">
+                            <span class="request__title h h_h1">Приглашаем  к сотрудничеству</span>
+                            <p class="request__text txt20">
+                                Будем раду сотрудничеству с производителями сельскохозяйственной продукции
+                                 на взаимовыгодных условиях
+                            </p>
+                            <form action="#" data-dev class="request__form form-request">
+                                <div class="form-request__fields">
+                                    <div
+                                        data-hint="Поле заполнено неверно"
+                                        class="form-request__input input input_pink"
+                                    >
+                                        <input
+                                            data-validate
+                                            data-required
+                                            autocomplete="off"
+                                            type="text"
+                                            name="form[]"
+                                            placeholder="Имя"
+                                            class="input__field"
+                                        />
+                                    </div>
+                                    <div
+                                        data-hint="Поле заполнено неверно"
+                                        class="form-request__input input input_pink"
+                                    >
+                                        <input
+                                            data-tel-mask
+                                            data-validate
+                                            data-required
+                                            autocomplete="off"
+                                            type="tel"
+                                            name="form[]"
+                                            placeholder="Телефон"
+                                            class="input__field"
+                                        />
+                                    </div>
+                                </div>
+                                <p class="form-request__text">
+                                    Нажимая на кнопку, вы соглашаетесь на обработку персональных данных
+                                    и политику конфиденциальности
+                                </p>
+                                <button type="submit" class="form-request__btn btn btn_pink">
+                                    <span class="btn__txt">Отправить заявку</span>
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </section>
             </main>
             <include src="./components/_activities-menu.html"></include>
             <include src="./components/footer.html"></include>

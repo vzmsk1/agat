@@ -154,6 +154,10 @@
 
     &__icon {
         margin: 0 auto;
+
+        svg {
+            color: $pink;
+        }
     }
 
     img,
