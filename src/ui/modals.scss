@@ -144,6 +144,9 @@ body::after {
             &__wrapper {
                 justify-content: stretch;
             }
+            &__inner {
+                padding: 0;
+            }
             &__content {
                 max-width: none;
             }
@@ -334,7 +337,7 @@ body::after {
     @media (min-width: 48em) {
         padding: 4rem;
 
-        height: 100vh;
+        height: calc(100vh - 8rem);
     }
 
     .swiper-slide {
