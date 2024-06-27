@@ -1,4 +1,5 @@
 import gsap from 'gsap';
+import videojs from 'video.js';
 import { ScrollToPlugin, ScrollTrigger } from 'gsap/all';
 import { bodyLock, bodyUnlock, removeClasses } from '../utils/utils';
 
@@ -20,6 +21,11 @@ document.addEventListener('click', function ({ target }) {
             }, 0);
         }
     }
+});
+
+document.addEventListener('aftermodalClose', function (e) {
+    const video = document.querySelector(`${e.detail.modal.hash} video`);
+    video && videojs.getPlayer(video.id).pause();
 });
 
 document.addEventListener('DOMContentLoaded', function () {

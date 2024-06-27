@@ -574,15 +574,100 @@
                     <div class="modal__scheme-wrap">
                         <img src="./assets/images/content/Схема.webp" alt="" class="modal__scheme">
                     </div>
-                    <button data-scheme-btn="1" type="button" class="modal__play-btn">
+                    <button data-modal="#videoModal" data-scheme-btn="1" type="button" class="modal__play-btn">
                         <img src="./assets/images/icons/play.svg" alt="">
                     </button>
-                    <button data-scheme-btn="2" type="button" class="modal__play-btn">
+                    <button data-modal="#videoModal" data-scheme-btn="2" type="button" class="modal__play-btn">
                         <img src="./assets/images/icons/play.svg" alt="">
                     </button>
-                    <button data-scheme-btn="3" type="button" class="modal__play-btn">
+                    <button data-modal="#videoModal" data-scheme-btn="3" type="button" class="modal__play-btn">
                         <img src="./assets/images/icons/play.svg" alt="">
                     </button>
+                    <button data-modal="#videoModal" data-scheme-btn="4" type="button" class="modal__play-btn">
+                        <img src="./assets/images/icons/play.svg" alt="">
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- видео -->
+<div id="videoModal" aria-hidden="true" class="modal modal_video">
+    <div class="modal__wrapper">
+        <div class="modal__content">
+            <div class="modal__body">
+                <button data-close="" type="button" class="modal__close">
+                    <svg>
+                        <use href="#cross-black-svg"></use>
+                    </svg>
+                </button>
+                <div class="modal__inner">
+                     <div class="modal__video-wrap">
+                        <video data-videojs="" class="modal__video&quot;">
+                            <source src="./assets/video/sample-video.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- документ -->
+<div id="docModal" aria-hidden="true" class="modal modal_doc">
+    <div class="modal__wrapper">
+        <div class="modal__content">
+            <div class="modal__body">
+                <button data-close="" type="button" class="modal__close">
+                    <svg>
+                        <use href="#cross-black-svg"></use>
+                    </svg>
+                </button>
+                <div class="modal__inner">
+                    <div class="modal__doc doc-modal">
+                        <div class="doc-modal__carousel">
+                            <button type="button" class="doc-modal__nav-btn i-btn i-btn_arr-prev">
+                                <svg>
+                                    <use href="#arr-left-svg"></use>
+                                </svg>
+                            </button>
+                            <div class="doc-modal__swiper swiper">
+                                <ul class="doc-modal__swiper-wrapper swiper-wrapper">
+                                    <li class="doc-modal__slide swiper-slide">
+                                        <div class="doc-modal__image-wrap">
+                                            <img class="doc-modal__image" src="./assets/images/doc.webp" alt="">
+                                        </div>
+                                    </li>
+                                    <li class="doc-modal__slide swiper-slide">
+                                        <div class="doc-modal__image-wrap">
+                                            <img class="doc-modal__image" src="./assets/images/doc.webp" alt="">
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <button type="button" class="doc-modal__nav-btn i-btn i-btn_arr-next">
+                                <svg>
+                                    <use href="#arr-right-svg"></use>
+                                </svg>
+                            </button>
+                            <div class="doc-modal__pagination swiper-bullets"></div>
+                        </div>
+                        <div class="doc-modal__thumb-swiper swiper">
+                            <ul class="doc-modal__thumb-swiper-wrapper swiper-wrapper">
+                                <li class="doc-modal__thumb-slide swiper-slide">
+                                    <div class="doc-modal__image-wrap">
+                                        <img class="doc-modal__image" src="./assets/images/doc.webp" alt="">
+                                    </div>
+                                </li>
+                                <li class="doc-modal__thumb-slide swiper-slide">
+                                    <div class="doc-modal__image-wrap">
+                                        <img class="doc-modal__image" src="./assets/images/doc.webp" alt="">
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

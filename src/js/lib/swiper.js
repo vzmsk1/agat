@@ -1,7 +1,7 @@
 import Swiper from 'swiper';
 import 'swiper/css';
 import { remToPx } from '../utils/utils';
-import { Navigation, Pagination, EffectFade } from 'swiper/modules';
+import { Navigation, Pagination, EffectFade, Thumbs } from 'swiper/modules';
 
 const mm = window.matchMedia('(max-width: 768px)');
 
@@ -253,6 +253,41 @@ function initSliders() {
                 768: {
                     slidesPerView: 4,
                     slidesPerGroup: 4
+                }
+            }
+        });
+    }
+    if (document.querySelector('.doc-modal__swiper')) {
+        const thumbs = new Swiper('.doc-modal__thumb-swiper', {
+            modules: [Navigation, Thumbs],
+            speed: 800,
+            loop: true,
+            direction: 'vertical',
+            slidesPerView: 'auto',
+            spaceBetween: remToPx(3.8)
+        });
+        new Swiper('.doc-modal__swiper', {
+            modules: [Navigation, Thumbs, Pagination],
+            speed: 800,
+            loop: true,
+            slidesPerView: 1,
+            navigation: {
+                prevEl: '.doc-modal .i-btn_arr-prev',
+                nextEl: '.doc-modal .i-btn_arr-next'
+            },
+            pagination: {
+                el: '.doc-modal__pagination',
+                type: 'bullets',
+                clickable: true
+            },
+            thumbs: {
+                swiper: thumbs
+            },
+            on: {
+                afterInit: (swiper) => {
+                    if (swiper.slides.length <= 1) {
+                        swiper.el.closest('.modal').classList.add('_no-slides');
+                    }
                 }
             }
         });
