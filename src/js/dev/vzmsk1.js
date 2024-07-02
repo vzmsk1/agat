@@ -34,7 +34,9 @@ document.addEventListener('DOMContentLoaded', function () {
 
         gsap.timeline({
             scrollTrigger: {
-                trigger: document.querySelector('section:last-of-type'),
+                trigger: document.querySelector('section:nth-child(3)')
+                    ? document.querySelector('section:nth-child(3)')
+                    : document.querySelector('section:last-of-type'),
                 start: 'center bottom',
                 end: 'bottom bottom',
                 onEnter: () => {

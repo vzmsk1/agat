@@ -110,6 +110,10 @@
 
             border-radius: 0 8.8rem 0 0;
         }
+
+        @media (min-width: 48em) {
+            min-height: 52rem;
+        }
     }
 
     &__title {
