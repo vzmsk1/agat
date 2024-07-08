@@ -47,10 +47,10 @@ import './lib/video';
 // simplebar
 import './lib/simplebar';
 
+// map
+import './lib/map';
+
 // --------------------------------------------------------------------------
 
 import './dev/vzmsk1.js';
 import './dev/markusDM.js';
-
-
-

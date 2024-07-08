@@ -112,6 +112,10 @@ main {
     }
 }
 
+.marker {
+    transform: translate(-50%, -50%);
+}
+
 .no-margin {
     &_md {
         margin: 0;
