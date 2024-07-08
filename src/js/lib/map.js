@@ -93,6 +93,20 @@ async function initMap(id) {
                 office && office.classList.add('_is-active');
             }
         });
+
+        document.querySelectorAll('[data-office-name]').forEach((officeElement) => {
+            officeElement.addEventListener('click', function () {
+                const officeId = this.getAttribute('data-office-name');
+                const marker = mapEl.querySelector(`.marker[data-office="${officeId}"]`);
+
+                if (marker) {
+                    removeClasses(mapEl.querySelectorAll('.marker'), '_is-active');
+                    removeClasses(document.querySelectorAll('.contacts__list-item'), '_is-active');
+                    marker.classList.add('_is-active');
+                    this.classList.add('_is-active');
+                }
+            });
+        });
     }
 }
 

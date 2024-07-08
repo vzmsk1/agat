@@ -7,7 +7,7 @@
     color: $white;
 
     @media (max-width: 48em) {
-        min-height: 136rem;
+        min-height: 84rem;
     }
 
     &__container {
@@ -80,6 +80,13 @@
 
         width: 100%;
         height: 100%;
+
+
+        video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
 
         &::after {
             content: '';

@@ -67,6 +67,12 @@
     &__image-wrap {
         height: 67.7rem;
 
+        video {
+            border-radius: 10rem 0rem 0 0;
+            @media (max-width: 48em) {
+                border-radius: 0rem 0rem 10rem 0;
+            }
+        }
         @media (min-width: 48em) {
             flex: 0 0 76rem;
             width: 76rem;
