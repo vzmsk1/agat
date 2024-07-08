@@ -211,14 +211,14 @@ function initSliders() {
     }
     if (document.querySelector('.laboratory__swiper')) {
         new Swiper('.laboratory__swiper', {
-            modules: [Pagination],
+            modules: [Pagination, Navigation],
             speed: 800,
             loop: true,
             slidesPerView: 1,
             spaceBetween: remToPx(4),
             navigation: {
-                prevEl: '.laboratory .i-btn_arr-prev',
-                nextEl: '.laboratory .i-btn_arr-next'
+                prevEl: '.i-btn_arr-prev',
+                nextEl: '.i-btn_arr-next'
             },
             pagination: {
                 el: '.laboratory__pagination',

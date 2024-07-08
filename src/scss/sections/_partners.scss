@@ -29,8 +29,11 @@
     }
 
     &__group {
+        align-items: center;
     }
 
+
+  
     &__carousel {
         position: relative;
 
@@ -128,3 +131,4 @@
         }
     }
 }
+

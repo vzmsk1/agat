@@ -51,10 +51,10 @@
 
     &__title {
         margin-bottom: 4.8rem;
-
+        display: block;
         @media (min-width: 48em) {
             margin-bottom: 3.2rem;
-
+            display: block;
             max-width: 130.4rem;
         }
     }

@@ -193,18 +193,18 @@
     }
 
     @media (any-hover: hover) {
-        &:hover {
-            .card-plants-info {
-                &__info-wrap {
-                    opacity: 1;
-                    visibility: visible;
-                }
-                &__content {
-                    opacity: 0;
-                    visibility: hidden;
-                }
-            }
-        }
+        // &:hover {
+        //     .card-plants-info {
+        //         &__info-wrap {
+        //             opacity: 1;
+        //             visibility: visible;
+        //         }
+        //         &__content {
+        //             opacity: 0;
+        //             visibility: hidden;
+        //         }
+        //     }
+        // }
     }
 
     &__info-wrap {

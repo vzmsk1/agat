@@ -108,11 +108,11 @@
 
     &__map {
         height: 62.2rem;
-
+        height: 90rem;
         @media (min-width: 48em) {
-            flex: 0 0 97.5rem;
+           
             width: 97.5rem;
-            height: 100%;
+            height: 90rem;
         }
     }
 
