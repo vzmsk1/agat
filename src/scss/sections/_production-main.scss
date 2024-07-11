@@ -193,7 +193,8 @@
 
         display: flex;
         justify-content: center;
-        box-shadow: 1.2rem 1.2rem 14rem rgba(98, 98, 98, 0.2);
+        box-shadow: 6px 6px 40px 0px #62626257;
+
         border-radius: 12rem 12rem 0 0;
 
         background-color: $white;
@@ -216,16 +217,19 @@
         }
 
         &_gold {
-            background-color: $gold;
+            background: linear-gradient(263.51deg, #B1934E -1.67%, #F2D790 35.23%, #B1934E 98.62%);
+
         }
+
+       
 
         @media (min-width: 48em) {
             padding-top: 0;
 
             flex: 0 0 107.3rem;
             width: 107.3rem;
-
-            box-shadow: 0.6rem 0.6rem 7rem rgba(98, 98, 98, 0.2);
+            box-shadow: 0.6rem 0.6rem 4rem 0px #62626257;
+            // box-shadow: 0.6rem 0.6rem 7rem rgba(98, 98, 98, 0.2);
             border-radius: 0 10rem 10rem 0;
         }
     }
@@ -292,5 +296,12 @@
             width: 100%;
             min-width: auto;
         }
+    }
+}
+
+.card-production-main:nth-child(even) {
+    .card-production-main__image-wrap_gold {
+        background: linear-gradient(236.5deg, #C10B73 -4.18%, #B6136D 13.92%, #F55BB2 30.54%, #B6136D 49.38%, #F55BB2 66.56%, #B6136D 83.74%, #C10B73 106.46%);
+
     }
 }
