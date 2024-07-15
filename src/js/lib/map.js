@@ -98,17 +98,30 @@ async function initMap(id) {
             officeElement.addEventListener('click', function () {
                 const officeId = this.getAttribute('data-office-name');
                 const marker = mapEl.querySelector(`.marker[data-office="${officeId}"]`);
-
+        
                 if (marker) {
                     removeClasses(mapEl.querySelectorAll('.marker'), '_is-active');
                     removeClasses(document.querySelectorAll('.contacts__list-item'), '_is-active');
                     marker.classList.add('_is-active');
                     this.classList.add('_is-active');
+        
+                    // Проверяем, что карта готова к использованию
+                     map.setLocation({
+                         center: markersCollection.find(n => n.id === officeId).coordinate,
+                           zoom: 15,
+                    });
+                   
+                    
+                   
                 }
             });
         });
+        
+        
+        
     }
 }
+
 
 document.getElementById('contacts-map') && initMap('contacts-map');
 document.getElementById('contacts-list-map') && initMap('contacts-list-map');
