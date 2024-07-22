@@ -237,3 +237,13 @@
         }
     }
 }
+
+
+.managers--mils {
+    @media (min-width: 48em) {
+        .managers__row_reversed .managers__list {
+            margin-right: initial;
+            max-width: 60rem;
+        }
+    }
+}

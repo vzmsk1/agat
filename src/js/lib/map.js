@@ -57,17 +57,17 @@ async function initMap(id) {
         content.insertAdjacentHTML(
             'beforeend',
             `
-					<svg width='69' height='80' viewBox='0 0 69 80' fill='none' xmlns='http://www.w3.org/2000/svg'>
-                        <g clip-path='url(#clip0_2430_11018)'>
+                <svg width='69' height='80' viewBox='0 0 69 80' fill='none' xmlns='http://www.w3.org/2000/svg'>
+                    <g clip-path='url(#clip0_2430_11018)'>
                         <path d='M44.084 33.3336C44.084 35.2172 43.522 37.0585 42.4689 38.6247C41.4159 40.1909 39.9192 41.4116 38.1681 42.1324C36.4169 42.8533 34.4901 43.0419 32.6311 42.6744C30.7721 42.3069 29.0645 41.3999 27.7242 40.0679C26.384 38.736 25.4713 37.039 25.1015 35.1916C24.7317 33.3441 24.9215 31.4292 25.6468 29.689C26.3722 27.9487 27.6005 26.4613 29.1765 25.4148C30.7524 24.3683 32.6053 23.8098 34.5007 23.8098C37.0423 23.8098 39.4799 24.8132 41.2771 26.5992C43.0743 28.3853 44.084 30.8077 44.084 33.3336ZM58.2194 56.9383L34.5007 80.0002L10.8203 56.9717C6.12053 52.3157 2.91612 46.3789 1.61253 39.9126C0.308939 33.4462 0.964756 26.7409 3.49699 20.645C6.02923 14.5492 10.3241 9.3368 15.8381 5.66742C21.3521 1.99805 27.8375 0.0365944 34.4735 0.0312609C41.1096 0.0259274 47.5982 1.97695 53.1181 5.63746C58.6381 9.29797 62.9414 14.5034 65.4836 20.5952C68.0257 26.687 68.6925 33.3913 67.3994 39.8597C66.1063 46.3282 62.9116 52.2748 58.2194 56.9383ZM53.6674 33.3336C53.6674 29.5663 52.5432 25.8837 50.4372 22.7513C48.3311 19.6189 45.3377 17.1775 41.8355 15.7359C38.3332 14.2942 34.4794 13.917 30.7615 14.652C27.0435 15.3869 23.6283 17.201 20.9478 19.8649C18.2673 22.5287 16.4419 25.9227 15.7023 29.6176C14.9628 33.3124 15.3423 37.1423 16.793 40.6228C18.2437 44.1033 20.7003 47.0781 23.8523 49.1711C27.0042 51.2641 30.7099 52.3812 34.5007 52.3812C39.584 52.3812 44.4591 50.3744 48.0536 46.8023C51.648 43.2302 53.6674 38.3853 53.6674 33.3336Z' fill='#E7158B'/>
-                        </g>
-                        <defs>
+                    </g>
+                    <defs>
                         <clipPath id='clip0_2430_11018'>
-                        <rect width='69' height='80' fill='white'/>
+                            <rect width='69' height='80' fill='white'/>
                         </clipPath>
-                        </defs>
-                    </svg>
-                  `
+                    </defs>
+                </svg>
+            `
         );
         content.dataset.office = el.id;
 
@@ -91,6 +91,11 @@ async function initMap(id) {
                 removeClasses(document.querySelectorAll('.contacts__list-item'), '_is-active');
                 mark.classList.add('_is-active');
                 office && office.classList.add('_is-active');
+
+                map.setLocation({
+                    center: markersCollection.find(n => n.id === mark.dataset.office).coordinate,
+                    zoom: 15,
+                });
             }
         });
 
@@ -105,23 +110,131 @@ async function initMap(id) {
                     marker.classList.add('_is-active');
                     this.classList.add('_is-active');
         
-                    // Проверяем, что карта готова к использованию
-                     map.setLocation({
-                         center: markersCollection.find(n => n.id === officeId).coordinate,
-                           zoom: 15,
+                    map.setLocation({
+                        center: markersCollection.find(n => n.id === officeId).coordinate,
+                        zoom: 15,
                     });
-                   
-                    
-                   
+
+                    // Прокрутка к офису в списке
+                    this.scrollIntoView({ behavior: 'smooth', block: 'start' });
                 }
             });
         });
-        
-        
-        
+    }
+
+    // Добавляем элементы управления на карту
+    addMapControls(map, isContactsListMap ? contactsListMapCenter : contactsMapCenter, id);
+}
+
+function addMapControls(map, initialCenter, mapId) {
+    const controlsContainer = document.createElement('div');
+    controlsContainer.className = 'map-controls';
+
+    const zoomInButton = document.createElement('button');
+    zoomInButton.className = 'map-control zoom-in';
+    zoomInButton.textContent = '+';
+
+    const zoomOutButton = document.createElement('button');
+    zoomOutButton.className = 'map-control zoom-out';
+    zoomOutButton.textContent = '-';
+
+    const resetButton = document.createElement('button');
+    resetButton.className = 'map-control reset';
+    resetButton.innerHTML = `
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 4V1L8 5L12 9V6C15.31 6 18 8.69 18 12C18 13.66 17.35 15.14 16.24 16.24L17.66 17.66C19.13 16.19 20 14.21 20 12C20 7.58 16.42 4 12 4ZM6 7.76L4.59 6.34C3.12 7.81 2 9.79 2 12C2 16.42 5.58 20 10 20V23L14 19L10 15V18C6.69 18 4 15.31 4 12C4 10.34 4.65 8.86 5.76 7.76H6Z" fill="currentColor"/>
+        </svg>
+    `;
+
+    controlsContainer.appendChild(zoomInButton);
+    controlsContainer.appendChild(zoomOutButton);
+    controlsContainer.appendChild(resetButton);
+
+    // Помещаем элементы управления внутрь .contacts__map-wrapp
+    const mapWrapper = document.querySelector(`#${mapId}`).closest('.contacts__map-wrapp');
+    mapWrapper.appendChild(controlsContainer);
+
+    zoomInButton.onclick = () => {
+        const currentZoom = map.zoom;
+        map.setLocation({
+            center: map.center,
+            zoom: currentZoom + 1,
+        });
+    };
+
+    zoomOutButton.onclick = () => {
+        const currentZoom = map.zoom;
+        map.setLocation({
+            center: map.center,
+            zoom: currentZoom - 1,
+        });
+    };
+
+    resetButton.onclick = () => {
+        map.setLocation({
+            center: initialCenter,
+            zoom: 10,
+        });
+    };
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+    if (document.getElementById('contacts-map')) {
+        initMap('contacts-map');
+    }
+    if (document.getElementById('contacts-list-map')) {
+        initMap('contacts-list-map');
+    }
+});
+
+
+// Функция для прокрутки контейнера к активному элементу
+function scrollToActiveItem() {
+    // Найдем контейнер с классом 'contacts__list-wrap'
+    const listWrap = document.querySelector('.contacts__list-wrap');
+
+    if (!listWrap) {
+        console.error('Container with class "contacts__list-wrap" not found.');
+        return;
+    }
+
+    // Найдем активный элемент с классом '_is-active'
+    const activeItem = listWrap.querySelector('.contacts__list-item._is-active');
+
+    if (activeItem) {
+        // Прокручиваем контейнер так, чтобы активный элемент оказался в видимой области
+        activeItem.scrollIntoView({ behavior: 'smooth', block: 'center' });
     }
 }
 
+// Функция для отслеживания изменений в DOM
+function observeClassChanges() {
+    const listWrap = document.querySelector('.contacts__list-wrap');
 
-document.getElementById('contacts-map') && initMap('contacts-map');
-document.getElementById('contacts-list-map') && initMap('contacts-list-map');
+    if (!listWrap) {
+        console.error('Container with class "contacts__list-wrap" not found.');
+        return;
+    }
+
+    // Создаем новый наблюдатель за изменениями в DOM
+    const observer = new MutationObserver((mutations) => {
+        mutations.forEach((mutation) => {
+            // Проверяем, если изменился класс на каком-либо из элементов
+            if (mutation.type === 'attributes' && mutation.attributeName === 'class') {
+                scrollToActiveItem();
+            }
+        });
+    });
+
+    // Настройка наблюдателя
+    observer.observe(listWrap, {
+        attributes: true, // Следим за изменениями атрибутов
+        subtree: true // Следим за изменениями во всех дочерних элементах
+    });
+}
+
+// Вызов функции для наблюдения за изменениями
+observeClassChanges();
+
+// Пример вызова функции при необходимости (например, после изменения класса)
+scrollToActiveItem();

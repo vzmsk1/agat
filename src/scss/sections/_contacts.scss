@@ -129,6 +129,41 @@
             row-gap: 4.8rem;
         }
     }
+
+    &__map-wrapp {
+        width: fit-content;
+        position: relative;
+    }
+
+    .map-controls {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .zoom-in, .zoom-out, .reset {
+        background-color: white;
+        border: 1px solid #ccc;
+        border-radius: 0.4rem;
+        margin: 0.5rem 0;
+        width: 5rem;
+        z-index: 10;
+        height: 5rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        user-select: none;
+    }
+
+
+    
+    .map-control:active {
+        background-color: #e6e6e6;
+    }
+    
 }
 
 #contacts-list-map {
