@@ -212,7 +212,9 @@
 
 
 .news-list__card .card-news .news-list__card_large {
-    
+    .card-news__title {
+        max-width: 100%;
+    }
 }
 
 
