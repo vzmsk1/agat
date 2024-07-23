@@ -26,25 +26,25 @@ input:focus {
     display: flex;
     height: 9.7rem;
 
-    background: url('./assets/images/bg-svg/input-shape.svg') center / 100% 100% no-repeat;
+    background: url('../assets/images/bg-svg/input-shape.svg') center / 100% 100% no-repeat;
     overflow: hidden;
 
     transition: border-bottom 0.5s ease;
 
     &_textarea {
-        background: url('./assets/images/bg-svg/textarea-shape.svg') center / 100% 100% no-repeat;
+        background: url('../assets/images/bg-svg/textarea-shape.svg') center / 100% 100% no-repeat;
 
         textarea {
             resize: none;
         }
 
         @media (max-width: 48em) {
-            background: url('./assets/images/bg-svg/textarea-shape-mobile.svg') center / 100% 100% no-repeat;
+            background: url('../assets/images/bg-svg/textarea-shape-mobile.svg') center / 100% 100% no-repeat;
         }
     }
 
     &_pink {
-        background: url('./assets/images/bg-svg/input-shape-pink.svg') center / 100% 100% no-repeat;
+        background: url('../assets/images/bg-svg/input-shape-pink.svg') center / 100% 100% no-repeat;
     }
 
     @media (max-width: 48em) {

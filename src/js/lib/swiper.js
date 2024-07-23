@@ -49,7 +49,8 @@ function initSliders() {
             modules: [Navigation, Pagination],
             speed: 800,
             loop: true,
-            slidesPerView: mm.matches ? 1 : 3,
+            slidesPerView: 1,
+            // slidesPerView: mm.matches ? 1 : 3,
             spaceBetween: remToPx(4),
             updateOnWindowResize: true,
             navigation: {
@@ -60,6 +61,11 @@ function initSliders() {
                 el: '.news__pagination',
                 type: 'bullets',
                 clickable: true
+            },
+            breakpoints: {
+                768: {
+                    slidesPerView: 4
+                }
             },
             on: {
                 afterInit: (swiper) => {

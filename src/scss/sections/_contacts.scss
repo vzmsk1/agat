@@ -133,6 +133,9 @@
     &__map-wrapp {
         width: fit-content;
         position: relative;
+        @media (max-width: 48em) {
+            width: 100%;
+        }
     }
 
     .map-controls {
@@ -141,6 +144,10 @@
         right: 10px;
         display: flex;
         flex-direction: column;
+        @media (max-width: 48em) {
+            right: 2rem;
+            top: 2rem;
+        }
     }
     
     .zoom-in, .zoom-out, .reset {

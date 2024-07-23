@@ -91,14 +91,15 @@
     &__inner {
         display: flex;
         flex-direction: column;
-        min-height: 87rem;
+        min-height: 101rem;
         border-radius: 5rem 0;
-
+        max-height: 101rem;
         overflow: hidden;
 
         @media (max-width: 48em) {
             min-height: 96rem;
             border-radius: 6rem 0;
+            max-height: 96rem;
         }
     }
 
@@ -112,7 +113,7 @@
 
         color: $white;
 
-        background: url('./assets/images/bg-svg/liner-pink.svg') center / cover no-repeat;
+        background: url('../assets/images/bg-svg/liner-pink.svg') center / cover no-repeat;
 
         @media (max-width: 48em) {
             padding: 4rem 2.8rem 5.6rem 2.8rem;

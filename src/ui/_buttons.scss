@@ -21,7 +21,7 @@
         width: 100%;
         height: 100%;
 
-        background: url('./assets/images/bg-svg/liner-pink.svg') center / cover no-repeat;
+        background: url('../assets/images/bg-svg/liner-pink.svg') center / cover no-repeat;
 
         opacity: 0;
         transition: opacity 0.3s ease-in-out;
@@ -67,7 +67,7 @@
         background-color: $gold;
 
         &::before {
-            background: url('./assets/images/bg-svg/liner-gold-2.svg') center / cover no-repeat;
+            background: url('../assets/images/bg-svg/liner-gold-2.svg') center / cover no-repeat;
         }
 
         .btn__txt {
@@ -138,7 +138,7 @@
     }
 
     &:not(&_bg) {
-        background: url('./assets/images/bg-svg/liner-gold.svg') center / cover no-repeat;
+        background: url('../assets/images/bg-svg/liner-gold.svg') center / cover no-repeat;
     }
 
     &_bg {
