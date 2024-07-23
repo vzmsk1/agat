@@ -49,8 +49,8 @@ function initSliders() {
             modules: [Navigation, Pagination],
             speed: 800,
             loop: true,
-            slidesPerView: 1,
-            // slidesPerView: mm.matches ? 1 : 3,
+            slidesPerView: mm.matches ? 1 : 3,
+           
             spaceBetween: remToPx(4),
             updateOnWindowResize: true,
             navigation: {
@@ -62,11 +62,7 @@ function initSliders() {
                 type: 'bullets',
                 clickable: true
             },
-            breakpoints: {
-                768: {
-                    slidesPerView: 3
-                }
-            },
+           
             on: {
                 afterInit: (swiper) => {
                     swiper.pagination.update();
