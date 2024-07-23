@@ -64,7 +64,7 @@ function initSliders() {
             },
             breakpoints: {
                 768: {
-                    slidesPerView: 4
+                    slidesPerView: 3
                 }
             },
             on: {
