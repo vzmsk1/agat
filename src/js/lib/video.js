@@ -15,7 +15,7 @@ function initVideoJS() {
                                     (window.innerWidth > 768 || video.dataset.videojsAutoplay === 'md');
             
             if (autoplayEnabled) {
-                vjs.controls(false);
+                // vjs.controls(false);
                 vjs.muted(true);
                 vjs.loop(true);
                 vjs.play().catch((error) => {
