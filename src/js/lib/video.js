@@ -10,21 +10,26 @@ function initVideoJS() {
                 poster: data.length ? data : null
             });
 
-            if (
-                video.hasAttribute('data-videojs-autoplay') &&
-                (window.innerWidth > 768 || video.dataset.videojsAutoplay === 'md')
-            ) {
+            // Проверка возможности автоплей
+            const autoplayEnabled = video.hasAttribute('data-videojs-autoplay') &&
+                                    (window.innerWidth > 768 || video.dataset.videojsAutoplay === 'md');
+            
+            if (autoplayEnabled) {
                 vjs.controls(false);
                 vjs.muted(true);
                 vjs.loop(true);
-                vjs.play().then(() => {
-                    console.log(vjs);
+                vjs.play().catch((error) => {
+                    console.error("Autoplay failed:", error);
                 });
             }
+
+            vjs.on('error', (e) => {
+                console.error("Video.js error:", e);
+            });
         });
     }
 }
 
 window.addEventListener('load', function () {
-    setTimeout(initVideoJS, 100);
+    setTimeout(initVideoJS, 500);
 });
