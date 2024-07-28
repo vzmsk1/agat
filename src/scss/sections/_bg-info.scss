@@ -102,9 +102,30 @@
         }
     }
 
+
+    &__bg-wrap--live {
+        @media (max-width: 48em) {
+            z-index: 0;
+        }
+    }
+
+    &__buttons--live {
+        @media (max-width: 48em) {
+            z-index: 2;
+            top: 22rem;
+            position: relative;
+        }
+    }
+
     &__bg {
         height: 100%;
 
         object-fit: cover;
+    }
+
+    &__title--live {
+        @media (max-width: 48em) {
+            position: absolute;
+        }
     }
 }
